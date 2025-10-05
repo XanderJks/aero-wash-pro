@@ -35,7 +35,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <button onClick={() => scrollToSection("hero")} className="font-heading font-bold text-2xl text-accent">
+            <button onClick={() => scrollToSection("hero")} className="font-heading font-bold text-2xl text-primary">
               SkyWash
             </button>
           </div>

@@ -54,9 +54,9 @@ const Features = () => {
             return (
               <div key={feature.title} className="text-center">
                 <div className="mb-4 mx-auto flex items-center justify-center">
-                  <Icon className="h-12 w-12 text-accent" />
+                  <Icon className="h-12 w-12 text-primary-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold mb-3 text-accent/90">{feature.title}</h3>
+                <h3 className="text-lg font-semibold mb-3 text-primary-foreground">{feature.title}</h3>
                 <p className="text-sm text-primary-foreground/80 leading-relaxed">{feature.description}</p>
               </div>
             );
@@ -73,27 +73,27 @@ const Features = () => {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>180° Carbon Fiber construction for durability</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>3200 PSI ground pressure pump with 100m water pipe</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>5.5-inch 1080P console with 15 KM wireless image transmission</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>Night vision capability and touch display</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>180° rotatable nozzle with carbon fiber spray boom</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>2 solid-state batteries with 3KW quick charger</span>
                 </li>
               </ul>
