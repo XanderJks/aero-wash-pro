@@ -38,7 +38,7 @@ const Hero = () => {
             <Button onClick={scrollToContact} variant="hero" size="xl">
               Request a Quote
             </Button>
-            <Button onClick={scrollToContact} variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10">
+            <Button onClick={scrollToContact} variant="outline" size="xl" className="bg-white/10 border-accent text-white hover:bg-accent hover:text-primary backdrop-blur-sm">
               Schedule Consultation
             </Button>
           </div>
