@@ -13,9 +13,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-heading font-bold text-2xl mb-4">AltitudeWash</h3>
+            <h3 className="font-heading font-bold text-2xl mb-4">SkyWash</h3>
             <p className="text-primary-foreground/80 mb-4">
-              Pioneering the future of commercial building maintenance with advanced drone technology.
+              Cut cleaning costs up to 60% – safer, faster, smarter. Three year warranty, lifetime maintenance, 24/7 online technical support.
             </p>
           </div>
 
@@ -60,21 +60,21 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@altitudewash.com" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  info@altitudewash.com
+                <a href="mailto:info@skywash.com" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  info@skywash.com
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <a href="tel:+1234567890" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  +1 (234) 567-890
+                <a href="tel:+971501234567" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  +971 50 123 4567
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  123 Innovation Drive<br />
-                  Tech City, TC 12345
+                  Compass Building, Al Hulaila<br />
+                  Ras Al Khaimah, UAE
                 </span>
               </li>
             </ul>
@@ -83,7 +83,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-primary-foreground/80">
-            &copy; {new Date().getFullYear()} AltitudeWash Drones. All rights reserved.
+            &copy; {new Date().getFullYear()} SkyWash Drones. All rights reserved.
           </p>
         </div>
       </div>

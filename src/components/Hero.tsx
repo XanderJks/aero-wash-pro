@@ -13,9 +13,7 @@ const Hero = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-32 pb-16">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Professional drone cleaning building exterior" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-hero">
       </div>
 
       {/* Content */}
@@ -26,12 +24,12 @@ const Hero = () => {
             <span className="text-primary-foreground font-medium">Industry-Leading Innovation Award 2024</span>
           </div>
 
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-primary-foreground leading-tight">
-            The Future of Exterior Building Cleaning is Here
+          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-accent-foreground leading-tight">
+            SkyWash S-Series 1
           </h1>
 
-          <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-2xl leading-relaxed">
-            Innovative drone-powered pressure washing solutions that put safety first for your commercial and industrial buildings.
+          <p className="text-xl md:text-2xl mb-8 text-accent-foreground/90 max-w-2xl leading-relaxed">
+            Cut cleaning costs up to 60% – safer, faster, smarter. Engineered to clean high buildings, houses, solar panels and billboards – anything high, safe and fast.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

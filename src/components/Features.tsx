@@ -41,10 +41,10 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-accent">
-            Why Choose AltitudeWash Drones?
+            Allround. Everywhere.
           </h2>
-          <p className="text-lg text-primary-foreground/90 max-w-4xl mx-auto leading-relaxed">
-            Specialising in a range of innovative exterior cleaning services – from drone window cleaning and drone facade cleaning for commercial buildings, to expert solutions for the gentle and thorough cleaning of solar panels and wind turbines. Whatever your project, rest assured that AltitudeWash Drones will work with you to find the best solution for you – one that not only meets the requirements of your property but one that also respects your operational constraints.
+          <p className="text-lg text-foreground/90 max-w-4xl mx-auto leading-relaxed">
+            Specialising in a range of innovative exterior cleaning services – from drone window cleaning and drone facade cleaning for commercial buildings, to expert solutions for the gentle and thorough cleaning of solar panels and wind turbines. Whatever your project, rest assured that SkyWash Drones will work with you to find the best solution for you – one that not only meets the requirements of your property but one that also respects your operational constraints.
           </p>
         </div>
 
@@ -73,24 +73,28 @@ const Features = () => {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Industrial-grade pressure washing systems (up to 3000 PSI)</span>
+                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span>180° Carbon Fiber construction for durability</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Advanced obstacle detection and collision avoidance</span>
+                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span>3200 PSI ground pressure pump with 100m water pipe</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Real-time monitoring and control systems</span>
+                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span>5.5-inch 1080P console with 15 KM wireless image transmission</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Weather-resistant design for all-season operation</span>
+                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span>Night vision capability and touch display</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Extended flight time with quick battery swap capability</span>
+                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span>180° rotatable nozzle with carbon fiber spray boom</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span>2 solid-state batteries with 3KW quick charger</span>
                 </li>
               </ul>
             </div>

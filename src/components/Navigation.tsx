@@ -19,9 +19,9 @@ const Navigation = () => {
       <div className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-2">
           <div className="flex justify-end items-center gap-6 text-sm">
-            <a href="mailto:info@altitudewash.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <a href="mailto:info@skywash.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Mail className="h-4 w-4" />
-              <span className="hidden sm:inline">info@altitudewash.com</span>
+              <span className="hidden sm:inline">info@skywash.com</span>
             </a>
             <a href="tel:+1234567890" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Phone className="h-4 w-4" />
@@ -35,8 +35,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <button onClick={() => scrollToSection("hero")} className="font-heading font-bold text-2xl text-primary">
-              AltitudeWash
+            <button onClick={() => scrollToSection("hero")} className="font-heading font-bold text-2xl text-accent">
+              SkyWash
             </button>
           </div>
 
