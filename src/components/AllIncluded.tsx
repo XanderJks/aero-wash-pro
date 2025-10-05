@@ -1,25 +1,29 @@
 import { Card } from "@/components/ui/card";
+import consoleImage from "@/assets/console.jpg";
+import batteriesImage from "@/assets/batteries.jpg";
+import sprayBoomImage from "@/assets/spray-boom.png";
+import caseImage from "@/assets/case.jpg";
 
 const includedItems = [
   {
     title: "5.5-INCH 1080P CONSOLE",
     description: "15 KM WIRELESS IMAGE, NIGHT VISION, TOUCH DISPLAY",
-    image: "console"
+    image: consoleImage
   },
   {
     title: "2 SOLID-STATE BATTERIES",
     description: "INCLUDED 3KW QUICK CHARGER (110-240V)",
-    image: "batteries"
+    image: batteriesImage
   },
   {
     title: "180° CARBON FIBER SPRAY BOOM",
     description: "INCLUDED 3200 PSI GROUND PRESSURE PUMP WITH 100 METER WATER PIPE",
-    image: "spray-boom"
+    image: sprayBoomImage
   },
   {
     title: "ALUMINIUM TRANSPORT CASE",
     description: "INCLUDED FULL TOOLKIT",
-    image: "transport-case"
+    image: caseImage
   }
 ];
 
@@ -36,12 +40,14 @@ const AllIncluded = () => {
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {includedItems.map((item) => (
             <Card key={item.title} className="bg-card/95 backdrop-blur-sm overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-              <div className="aspect-square bg-muted/50 mb-4 flex items-center justify-center">
-                <div className="w-32 h-32 bg-muted rounded-lg flex items-center justify-center">
-                  <span className="text-xs text-muted-foreground text-center px-4">{item.image}</span>
-                </div>
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="p-6 pt-0">
+              <div className="p-6">
                 <h3 className="font-bold text-lg mb-3 text-foreground leading-tight">{item.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
