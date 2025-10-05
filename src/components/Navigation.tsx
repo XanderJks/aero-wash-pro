@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { Menu, X, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const scrollToSection = (id: string) => {
+    if (location.pathname !== "/") {
+      window.location.href = `/#${id}`;
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -48,9 +54,9 @@ const Navigation = () => {
             <button onClick={() => scrollToSection("industries")} className="text-foreground hover:text-primary transition-colors font-medium">
               Industries
             </button>
-            <button onClick={() => scrollToSection("about")} className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
               About
-            </button>
+            </Link>
             <button onClick={() => scrollToSection("testimonials")} className="text-foreground hover:text-primary transition-colors font-medium">
               Testimonials
             </button>
@@ -75,9 +81,9 @@ const Navigation = () => {
               <button onClick={() => scrollToSection("industries")} className="text-left py-2 hover:text-primary transition-colors font-medium">
                 Industries
               </button>
-              <button onClick={() => scrollToSection("about")} className="text-left py-2 hover:text-primary transition-colors font-medium">
+              <Link to="/about" className="text-left py-2 hover:text-primary transition-colors font-medium" onClick={() => setIsOpen(false)}>
                 About
-              </button>
+              </Link>
               <button onClick={() => scrollToSection("testimonials")} className="text-left py-2 hover:text-primary transition-colors font-medium">
                 Testimonials
               </button>
