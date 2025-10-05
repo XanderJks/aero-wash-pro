@@ -87,7 +87,7 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              Get a Free Quote
+              Get a Free <span className="text-accent">Quote</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Ready to revolutionize your building maintenance? Contact us today for a customized solution

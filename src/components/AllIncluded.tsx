@@ -32,8 +32,8 @@ const AllIncluded = () => {
     <section className="py-20 bg-primary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-accent">
-            All included.
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-white">
+            All <span className="text-accent">included.</span>
           </h2>
         </div>
 
