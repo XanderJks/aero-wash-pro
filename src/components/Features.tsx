@@ -40,10 +40,10 @@ const Features = () => {
     <section id="features" className="py-20 bg-primary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-accent">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-white">
             Allround. Everywhere.
           </h2>
-          <p className="text-lg text-foreground/90 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-white/90 max-w-4xl mx-auto leading-relaxed">
             Specialising in a range of innovative exterior cleaning services – from drone window cleaning and drone facade cleaning for commercial buildings, to expert solutions for the gentle and thorough cleaning of solar panels and wind turbines. Whatever your project, rest assured that SkyWash Drones will work with you to find the best solution for you – one that not only meets the requirements of your property but one that also respects your operational constraints.
           </p>
         </div>
