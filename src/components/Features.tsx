@@ -48,7 +48,7 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 mb-16">
+        <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8 mb-16">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
@@ -65,7 +65,7 @@ const Features = () => {
 
         {/* Product Showcase */}
         <div className="bg-card rounded-2xl overflow-hidden shadow-elegant p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h3 className="font-heading text-3xl font-bold mb-6">Meet Our Technology</h3>
               <p className="text-lg text-muted-foreground mb-6">
