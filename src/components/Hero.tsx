@@ -34,7 +34,7 @@ const Hero = () => {
             Cut cleaning costs up to 60% – safer, faster, smarter. Engineered to clean high buildings, houses, solar panels and billboards – anything high, safe and fast.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-row gap-4">
             <Button onClick={scrollToContact} variant="hero" size="xl">
               Request a Quote
             </Button>
