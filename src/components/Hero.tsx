@@ -10,7 +10,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-32 pb-16">
+    <section id="hero" className="relative min-h-[60vh] md:min-h-screen flex items-center pt-24 md:pt-32 pb-12 md:pb-16">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img src={heroImage} alt="Professional drone cleaning building exterior" className="w-full h-full object-cover" />
