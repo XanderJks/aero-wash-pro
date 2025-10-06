@@ -18,8 +18,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 md:px-4 relative z-10">
-        <div className="max-w-4xl pl-2 md:pl-0">
+      <div className="container mx-auto px-6 md:px-4 relative z-10 w-full">
+        <div className="w-full md:max-w-4xl pl-2 md:pl-0">
 
           <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-primary-foreground leading-tight">
             SkyWash S-Series 1
