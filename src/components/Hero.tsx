@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Award } from "lucide-react";
 import heroImage from "@/assets/hero-drone-cleaning.jpg";
 
 const Hero = () => {
@@ -21,10 +20,6 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl">
-          <div className="mb-6 inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full border border-accent/30">
-            <Award className="h-5 w-5 text-accent" />
-            <span className="text-primary-foreground font-medium">Industry-Leading Innovation Award 2024</span>
-          </div>
 
           <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-primary-foreground leading-tight">
             SkyWash S-Series 1

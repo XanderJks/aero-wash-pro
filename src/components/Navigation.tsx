@@ -57,9 +57,6 @@ const Navigation = () => {
             <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
               About
             </Link>
-            <button onClick={() => scrollToSection("testimonials")} className="text-foreground hover:text-primary transition-colors font-medium">
-              Testimonials
-            </button>
             <Button onClick={() => scrollToSection("contact")} variant="hero">
               Get a Quote
             </Button>
@@ -84,9 +81,6 @@ const Navigation = () => {
               <Link to="/about" className="text-left py-2 hover:text-primary transition-colors font-medium" onClick={() => setIsOpen(false)}>
                 About
               </Link>
-              <button onClick={() => scrollToSection("testimonials")} className="text-left py-2 hover:text-primary transition-colors font-medium">
-                Testimonials
-              </button>
               <Button onClick={() => scrollToSection("contact")} variant="hero" className="w-full">
                 Get a Quote
               </Button>
