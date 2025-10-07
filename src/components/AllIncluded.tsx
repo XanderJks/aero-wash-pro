@@ -34,7 +34,6 @@ const includedItems = [
 const AllIncluded = () => {
   return (
     <section className="py-20 bg-primary relative overflow-hidden">
-      <div className="absolute -top-20 left-0 w-full h-40 bg-background rounded-b-[100px] transform rotate-2"></div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-white">
