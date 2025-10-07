@@ -29,28 +29,40 @@ const Contact = () => {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       contactSchema.parse(formData);
       setErrors({});
-      
-      // In a real application, this would send data to your backend
-      toast({
-        title: "Demo Request Submitted",
-        description: "Thank you! Our sales team will contact you within 24 hours with pricing and demo options.",
+
+      // Send to Make.com webhook
+      const response = await fetch('https://hook.eu2.make.com/gw2tmaxxizftf5ba8j8ehbwuv47tlb3a', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        industry: "",
-        message: "",
-      });
+
+      if (response.ok) {
+        toast({
+          title: "Demo Request Submitted",
+          description: "Thank you! Our sales team will contact you within 24 hours with pricing and demo options.",
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          industry: "",
+          message: "",
+        });
+      } else {
+        throw new Error('Failed to submit form');
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         const newErrors: Record<string, string> = {};
@@ -60,10 +72,16 @@ const Contact = () => {
           }
         });
         setErrors(newErrors);
-        
+
         toast({
           title: "Validation Error",
           description: "Please check the form and correct any errors.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Submission Error",
+          description: "Something went wrong. Please try again later.",
           variant: "destructive",
         });
       }
