@@ -29,9 +29,9 @@ const Navigation = () => {
               <Mail className="h-4 w-4" />
               <span>info@SkyWashPro.com</span>
             </a>
-            <a href="tel:+1234567890" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <a href="tel:+31638104765" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Phone className="h-4 w-4" />
-              <span>+1 (234) 567-890</span>
+              <span>+31 6 38104765</span>
             </a>
           </div>
         </div>
