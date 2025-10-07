@@ -9,56 +9,47 @@ const VideoDemo = () => {
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-muted/30">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 px-4 py-1.5 bg-accent/10 rounded-full">
-              <span className="text-accent font-semibold text-sm uppercase tracking-wide">Live Demo</span>
-            </div>
-            <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              Watch it Work
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-white">
+              See It In Action
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              20-story building cleaned in 3 hours. Zero scaffolding. Zero risk. 100% results.
+            <p className="text-lg text-gray-400 max-w-3xl">
+              Watch our drone clean a 20-story building in under 3 hours. No ropes, no lifts, no risk.
             </p>
           </div>
 
           <div className="relative">
             {!isVideoOpen ? (
               <div
-                className="relative rounded-2xl overflow-hidden shadow-elegant cursor-pointer group"
+                className="relative overflow-hidden cursor-pointer group"
                 onClick={() => setIsVideoOpen(true)}
               >
-                <div className="aspect-video relative">
+                <div className="aspect-video relative bg-gray-900">
                   <img
                     src={thumbnailUrl}
                     alt="SkyWashPro drone cleaning demonstration video"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent transition-all duration-300 group-hover:from-primary/90 group-hover:via-primary/50"></div>
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
 
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-accent rounded-full animate-ping opacity-30"></div>
-                      <Button
-                        size="lg"
-                        className="relative h-20 w-20 rounded-full bg-accent hover:bg-accent/90 text-primary shadow-2xl group-hover:scale-110 transition-transform duration-300"
-                      >
-                        <Play className="h-8 w-8 fill-current ml-1" />
-                      </Button>
-                    </div>
+                    <Button
+                      size="lg"
+                      className="h-24 w-24 rounded-full bg-white hover:bg-gray-100 text-black shadow-xl group-hover:scale-105 transition-transform"
+                    >
+                      <Play className="h-10 w-10 fill-current ml-1.5" />
+                    </Button>
                   </div>
 
-                  <div className="absolute bottom-8 left-8 right-8">
-                    <div className="inline-block px-3 py-1 bg-accent/90 rounded-full mb-3">
-                      <span className="text-primary font-bold text-xs uppercase tracking-wider">Time-Lapse</span>
-                    </div>
-                    <h3 className="text-white text-2xl font-bold mb-1">
-                      Complete Building Transformation
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">
+                    <h3 className="text-white text-2xl font-bold mb-2">
+                      Full Building Cleaning Demo
                     </h3>
-                    <p className="text-white/80 text-base">
-                      Real job, real results
+                    <p className="text-gray-300">
+                      3 hours of work in 3 minutes
                     </p>
                   </div>
                 </div>
@@ -86,27 +77,18 @@ const VideoDemo = () => {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-              <div className="relative text-center p-8 rounded-2xl bg-card/80 backdrop-blur-sm border-2 border-accent/20 hover:border-accent/40 transition-all duration-300">
-                <div className="text-6xl font-bold bg-gradient-to-br from-accent to-accent/70 bg-clip-text text-transparent mb-3">3h</div>
-                <p className="text-foreground font-medium text-sm uppercase tracking-wide">Complete 20-Story Clean</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white p-8 border-l-4 border-accent">
+              <div className="text-5xl font-bold text-primary mb-3">3 Hours</div>
+              <p className="text-gray-600 font-medium">Average cleaning time for 20-story building</p>
             </div>
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-              <div className="relative text-center p-8 rounded-2xl bg-card/80 backdrop-blur-sm border-2 border-accent/20 hover:border-accent/40 transition-all duration-300">
-                <div className="text-6xl font-bold bg-gradient-to-br from-accent to-accent/70 bg-clip-text text-transparent mb-3">0</div>
-                <p className="text-foreground font-medium text-sm uppercase tracking-wide">Safety Incidents Ever</p>
-              </div>
+            <div className="bg-white p-8 border-l-4 border-accent">
+              <div className="text-5xl font-bold text-primary mb-3">100%</div>
+              <p className="text-gray-600 font-medium">Safety record - zero incidents</p>
             </div>
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-              <div className="relative text-center p-8 rounded-2xl bg-card/80 backdrop-blur-sm border-2 border-accent/20 hover:border-accent/40 transition-all duration-300">
-                <div className="text-6xl font-bold bg-gradient-to-br from-accent to-accent/70 bg-clip-text text-transparent mb-3">60%</div>
-                <p className="text-foreground font-medium text-sm uppercase tracking-wide">Lower Than Traditional</p>
-              </div>
+            <div className="bg-white p-8 border-l-4 border-accent">
+              <div className="text-5xl font-bold text-primary mb-3">60%</div>
+              <p className="text-gray-600 font-medium">Cost savings vs traditional methods</p>
             </div>
           </div>
         </div>
