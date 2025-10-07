@@ -51,10 +51,10 @@ const Industries = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            What We Clean
+            Applications
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            If it's tall, dirty, and dangerous to clean—we've probably done it
+            Commercial cleaning operations using the SkyWashPro S1
           </p>
         </div>
 
