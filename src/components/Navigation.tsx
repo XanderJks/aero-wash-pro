@@ -48,9 +48,6 @@ const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/services" className="text-foreground hover:text-primary transition-colors font-medium">
-              Services
-            </Link>
             <button onClick={() => scrollToSection("industries")} className="text-foreground hover:text-primary transition-colors font-medium">
               Industries
             </button>
@@ -61,7 +58,7 @@ const Navigation = () => {
               FAQ
             </Link>
             <Button onClick={() => scrollToSection("contact")} variant="hero">
-              Get a Quote
+              Request Demo
             </Button>
           </div>
 
@@ -78,13 +75,6 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-4 border-t">
-            <Link
-              to="/services"
-              className="block text-foreground hover:text-primary transition-colors font-medium py-2"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
             <button
               onClick={() => scrollToSection("industries")}
               className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
@@ -106,7 +96,7 @@ const Navigation = () => {
               FAQ
             </Link>
             <Button onClick={() => scrollToSection("contact")} variant="hero" className="w-full">
-              Get a Quote
+              Request Demo
             </Button>
           </div>
         )}

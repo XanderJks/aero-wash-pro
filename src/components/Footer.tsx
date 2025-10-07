@@ -26,11 +26,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
                 <Link to="/faq" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   FAQ
                 </Link>
@@ -44,12 +39,12 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-4">Services</h4>
+            <h4 className="font-semibold text-lg mb-4">Product</h4>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li>High-Rise Facade Cleaning</li>
-              <li>Solar Panel Maintenance</li>
-              <li>Wind Turbine Cleaning</li>
-              <li>Residential Properties</li>
+              <li>SkyWashPro S1 Drone</li>
+              <li>Training & Certification</li>
+              <li>Technical Support</li>
+              <li>Warranty & Maintenance</li>
             </ul>
           </div>
 
