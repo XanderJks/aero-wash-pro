@@ -7,19 +7,19 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              About AltitudeWash
+              Who We Are
             </h2>
             <p className="text-xl text-muted-foreground">
-              Pioneering the future of commercial building maintenance
+              The team that got tired of watching people risk their lives cleaning windows
             </p>
           </div>
 
           <div className="prose prose-lg max-w-none mb-12">
             <p className="text-lg text-foreground/90 mb-6">
-              AltitudeWash is at the forefront of drone technology innovation, revolutionizing how commercial and industrial buildings are cleaned and maintained. Our mission is to make high-altitude building maintenance safer, more efficient, and more cost-effective through cutting-edge autonomous drone technology.
+              Three years ago, we watched another window washer fall. That was the moment we decided: there has to be a better way. So we built it. Engineers, pilots, and building managers came together to design a drone that could do the dangerous work safely.
             </p>
             <p className="text-lg text-foreground/90">
-              Founded by industry experts with decades of combined experience in aviation, robotics, and commercial facility management, we've developed the most advanced pressure washing drone system on the market. Our technology has been tested and proven across hundreds of projects, serving some of the world's leading companies.
+              We've cleaned over 200 buildings so far—from Amsterdam offices to Dubai skyscrapers. Every project proves the same thing: drones work better, cost less, and nobody gets hurt. That's what matters.
             </p>
           </div>
 
@@ -28,9 +28,9 @@ const About = () => {
               <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-4">
                 <Target className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="font-heading font-semibold text-xl mb-2">Our Mission</h3>
+              <h3 className="font-heading font-semibold text-xl mb-2">Why We Exist</h3>
               <p className="text-muted-foreground">
-                Transform building maintenance with safe, innovative technology
+                End workplace deaths in building maintenance
               </p>
             </div>
 
@@ -38,9 +38,9 @@ const About = () => {
               <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-primary/10 mb-4">
                 <Users className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="font-heading font-semibold text-xl mb-2">Our Team</h3>
+              <h3 className="font-heading font-semibold text-xl mb-2">Who We Are</h3>
               <p className="text-muted-foreground">
-                Expert engineers and industry professionals dedicated to excellence
+                Drone pilots, safety inspectors, and engineers who actually understand buildings
               </p>
             </div>
 

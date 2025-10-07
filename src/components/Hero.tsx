@@ -26,15 +26,15 @@ const Hero = () => {
           </h1>
 
           <p className="text-base sm:text-lg md:text-2xl mb-6 md:mb-8 text-primary-foreground/90 max-w-2xl leading-relaxed">
-            Cut cleaning costs up to 60% – safer, faster, smarter. Engineered to clean high buildings, houses, solar panels and billboards – anything high, safe and fast.
+            Stop risking lives on scaffolding. Our drones slash cleaning costs by 60% while keeping everyone safe on the ground.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
             <Button onClick={scrollToContact} variant="hero" size="lg" className="w-full sm:w-auto">
-              Request a Quote
+              See Pricing
             </Button>
             <Button onClick={scrollToContact} variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-accent text-white hover:bg-accent hover:text-primary backdrop-blur-sm">
-              Schedule Consultation
+              Watch Demo
             </Button>
           </div>
         </div>

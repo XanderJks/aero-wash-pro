@@ -6,33 +6,33 @@ import droneTechnology from "@/assets/drone-technology.png";
 const features = [
   {
     icon: Shield,
-    title: "Enhanced Safety",
-    description: "Eliminate risks to workers with our autonomous high-altitude cleaning technology. No scaffolding, no harnesses, no danger.",
+    title: "Zero Risk",
+    description: "Nobody climbs. Nobody falls. Our drones do the dangerous work while your team stays safe.",
   },
   {
     icon: Zap,
-    title: "Advanced Technology",
-    description: "State-of-the-art pressure washing drones equipped with precision sensors and high-efficiency cleaning systems.",
+    title: "Military-Grade Tech",
+    description: "Built with carbon fiber and precision sensors. This isn't a toy—it's professional equipment.",
   },
   {
     icon: DollarSign,
-    title: "Cost-Effective",
-    description: "Reduce cleaning costs by up to 60% compared to traditional methods. No expensive equipment rentals or extensive labor.",
+    title: "60% Cheaper",
+    description: "No scaffolding rentals. No insurance nightmares. Just fast, affordable cleaning.",
   },
   {
     icon: Clock,
-    title: "Time Efficient",
-    description: "Complete building cleaning in a fraction of the time. Our drones work faster and more efficiently than manual methods.",
+    title: "5x Faster",
+    description: "What takes a crew days, our drone finishes in hours. Get back to business faster.",
   },
   {
     icon: Droplets,
-    title: "High-Pressure Precision",
-    description: "Powerful pressure washing capabilities with adjustable settings for different surface types and cleaning requirements.",
+    title: "3200 PSI Power",
+    description: "Professional pressure washing from the sky. Adjustable for any surface—glass, concrete, you name it.",
   },
   {
     icon: CheckCircle,
-    title: "Eco-Friendly",
-    description: "Minimal water usage and environmentally conscious cleaning solutions. Sustainable technology for a better future.",
+    title: "Water Smart",
+    description: "Uses 70% less water than traditional methods. Your building gets clean, the planet stays green.",
   },
 ];
 
@@ -42,10 +42,10 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-white">
-            Allround. <span className="text-accent">Everywhere.</span>
+            Clean Anything. <span className="text-accent">Anywhere High.</span>
           </h2>
           <p className="text-lg text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Specialising in a range of innovative exterior cleaning services – from drone window cleaning and drone facade cleaning for commercial buildings, to expert solutions for the gentle and thorough cleaning of solar panels and wind turbines. Whatever your project, rest assured that SkyWash Drones will work with you to find the best solution for you – one that not only meets the requirements of your property but one that also respects your operational constraints.
+            Skyscrapers, solar farms, wind turbines—if it's high up and dirty, we clean it. No ladders, no lifts, no drama. Just a drone that flies up, blasts the grime, and gets the job done. We've cleaned everything from 50-story office towers to rural solar installations. Tell us what needs cleaning, we'll tell you when we can start.
           </p>
         </div>
 
@@ -68,47 +68,47 @@ const Features = () => {
         <div className="bg-card rounded-2xl overflow-hidden shadow-elegant p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h3 className="font-heading text-3xl font-bold mb-4">SkyWash S-Series 1</h3>
-              <h4 className="text-xl font-semibold mb-6 text-muted-foreground">Meet Our Technology</h4>
+              <h3 className="font-heading text-3xl font-bold mb-4">The Beast That Cleans</h3>
+              <h4 className="text-xl font-semibold mb-6 text-muted-foreground">AltitudeWash S1 Specs</h4>
               <p className="text-lg text-muted-foreground mb-6">
-                Our high-tech drones are engineered for precision, reliability, and maximum cleaning performance. Each unit is equipped with:
+                This isn't your neighbor's camera drone. Built tough for commercial work, tested on hundreds of buildings:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>180° Carbon Fiber construction for durability</span>
+                  <span>Carbon fiber frame - survives crashes, wind, and weather</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>3200 PSI ground pressure pump with 100m water pipe</span>
+                  <span>3200 PSI pump - professional pressure with 100m reach</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>5.5-inch 1080P console with 15 KM wireless image transmission</span>
+                  <span>15 km live video feed - see exactly what you're cleaning</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Night vision capability and touch display</span>
+                  <span>Night vision - work after hours without disturbing tenants</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>180° rotatable nozzle with carbon fiber spray boom</span>
+                  <span>180° rotating nozzle - hits every angle perfectly</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>2 solid-state batteries with 3KW quick charger</span>
+                  <span>Hot-swap batteries - clean all day without downtime</span>
                 </li>
               </ul>
-              <Button 
-                variant="default" 
-                size="lg" 
+              <Button
+                variant="default"
+                size="lg"
                 className="mt-8"
                 onClick={() => {
                   const element = document.getElementById("contact");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Get More Details
+                Talk to Us
               </Button>
             </div>
             <div>

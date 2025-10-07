@@ -8,33 +8,33 @@ import windImage from "@/assets/industry-wind.jpg";
 
 const industries = [
   {
-    title: "Villa",
-    description: "Transform your villa's exterior effortlessly with our cleaning drone.",
+    title: "Luxury Homes",
+    description: "Your villa deserves better than teenagers on ladders. Professional results, zero risk.",
     image: villaImage,
   },
   {
-    title: "Facade",
-    description: "Achieve spotless facades with ease using our cleaning drone.",
+    title: "High-Rises",
+    description: "Glass towers stay spotless without closing floors or setting up swing stages.",
     image: facadeImage,
   },
   {
-    title: "Solar Panel",
-    description: "Maximize solar efficiency with a clean solar panel, thanks to our drone.",
+    title: "Solar Farms",
+    description: "Dirty panels lose 30% efficiency. Clean them fast without touching a single cell.",
     image: solarImage,
   },
   {
-    title: "Advertising Board",
-    description: "Ensure your advertising board shines brightly with our cleaning drone.",
+    title: "Billboards",
+    description: "Highway signs stay bright and readable. No traffic disruption, no crane rentals.",
     image: advertisingImage,
   },
   {
-    title: "Shopping Malls",
-    description: "Keep your supermarket exterior pristine with our powerful cleaning drone.",
+    title: "Retail Centers",
+    description: "Shopping centers look fresh without closing entrances or scaring customers.",
     image: shoppingImage,
   },
   {
-    title: "Wind Turbine",
-    description: "Maintain optimal wind turbine performance with our specialized cleaning drone.",
+    title: "Wind Turbines",
+    description: "Clean blades spin better. Reach the highest turbines without shutdown time.",
     image: windImage,
   },
 ];
@@ -45,10 +45,10 @@ const Industries = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Industries We Serve
+            What We Clean
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Trusted by leading companies across multiple sectors for professional building maintenance
+            If it's tall, dirty, and dangerous to clean—we've probably done it
           </p>
         </div>
 

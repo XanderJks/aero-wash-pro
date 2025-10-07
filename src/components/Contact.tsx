@@ -87,17 +87,17 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              Get a Free <span className="text-accent">Quote</span>
+              Let's <span className="text-accent">Talk</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Ready to revolutionize your building maintenance? Contact us today for a customized solution
+              Tell us what needs cleaning. We'll tell you exactly what it costs and when we can start.
             </p>
           </div>
 
           <Card className="border-2">
             <CardHeader>
-              <CardTitle>Request a Consultation</CardTitle>
-              <CardDescription>Fill out the form below and our team will get back to you within 24 hours</CardDescription>
+              <CardTitle>Get Your Quote</CardTitle>
+              <CardDescription>Real humans reply within 24 hours. No sales pitch, just honest answers.</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -160,13 +160,13 @@ const Contact = () => {
                       <SelectValue placeholder="Select your industry" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="manufacturing">Manufacturing</SelectItem>
-                      <SelectItem value="commercial">Commercial Office</SelectItem>
-                      <SelectItem value="warehouse">Warehouse & Distribution</SelectItem>
-                      <SelectItem value="healthcare">Healthcare</SelectItem>
-                      <SelectItem value="retail">Retail</SelectItem>
-                      <SelectItem value="hospitality">Hospitality</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                      <SelectItem value="commercial">Office Buildings</SelectItem>
+                      <SelectItem value="residential">Luxury Homes</SelectItem>
+                      <SelectItem value="solar">Solar Farms</SelectItem>
+                      <SelectItem value="wind">Wind Turbines</SelectItem>
+                      <SelectItem value="retail">Shopping Centers</SelectItem>
+                      <SelectItem value="advertising">Billboards & Signs</SelectItem>
+                      <SelectItem value="other">Something Else</SelectItem>
                     </SelectContent>
                   </Select>
                   {errors.industry && <p className="text-sm text-destructive">{errors.industry}</p>}
@@ -178,7 +178,7 @@ const Contact = () => {
                     id="message"
                     value={formData.message}
                     onChange={(e) => handleChange("message", e.target.value)}
-                    placeholder="Describe your building cleaning needs, size of facilities, and any specific requirements..."
+                    placeholder="What needs cleaning? How high is it? When do you need it done?"
                     rows={5}
                     className={errors.message ? "border-destructive" : ""}
                   />
@@ -186,7 +186,7 @@ const Contact = () => {
                 </div>
 
                 <Button type="submit" variant="hero" size="lg" className="w-full">
-                  Submit Quote Request
+                  Get My Quote
                 </Button>
               </form>
             </CardContent>
