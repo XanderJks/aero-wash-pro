@@ -100,20 +100,24 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 bg-white">
+    <section id="contact" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-16">
-            <h2 className="font-heading text-6xl font-bold mb-4 text-foreground">
-              Get pricing
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              Ready to <span className="text-accent">Buy</span>?
             </h2>
-            <p className="text-xl text-foreground/60">
-              Our sales team responds within 24 hours
+            <p className="text-xl text-muted-foreground">
+              Request a demo, get pricing, or talk to our sales team. We ship worldwide.
             </p>
           </div>
 
-          <Card className="border-2 border-foreground/10">
-            <CardContent className="pt-8">
+          <Card className="border-2">
+            <CardHeader>
+              <CardTitle>Request Product Demo & Pricing</CardTitle>
+              <CardDescription>Our sales team responds within 24 hours with pricing, specs, and demo scheduling.</CardDescription>
+            </CardHeader>
+            <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -199,12 +203,8 @@ const Contact = () => {
                   {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
                 </div>
 
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-foreground hover:bg-foreground/90 text-white py-6 text-base font-bold"
-                >
-                  Send Request
+                <Button type="submit" variant="hero" size="lg" className="w-full">
+                  Request Demo & Pricing
                 </Button>
               </form>
             </CardContent>

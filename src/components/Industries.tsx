@@ -47,31 +47,33 @@ const industries = [
 
 const Industries = () => {
   return (
-    <section id="industries" className="py-32 bg-foreground text-background">
+    <section id="industries" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="mb-20">
-          <h2 className="font-heading text-6xl font-bold text-background">
-            Who uses this
+        <div className="text-center mb-16">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Applications
           </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Commercial cleaning operations using the SkyWashPro S1
+          </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-6">
           {industries.map((industry) => (
-            <div
-              key={industry.title}
-              className="group relative aspect-[4/3] overflow-hidden"
-            >
-              <img
-                src={industry.image}
-                alt={industry.alt}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors flex flex-col justify-end p-8">
-                <h3 className="font-heading text-3xl font-bold text-white mb-2">{industry.title}</h3>
-                <p className="text-white/80 text-base">{industry.description}</p>
+            <Card key={industry.title} className="overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary">
+              <div className="aspect-square overflow-hidden">
+                <img
+                  src={industry.image}
+                  alt={industry.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
-            </div>
+              <CardHeader>
+                <CardTitle className="text-lg mb-2">{industry.title}</CardTitle>
+                <CardDescription>{industry.description}</CardDescription>
+              </CardHeader>
+            </Card>
           ))}
         </div>
       </div>

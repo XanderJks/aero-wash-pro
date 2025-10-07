@@ -10,7 +10,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative h-screen flex items-end pt-32 pb-16 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center pt-32 pb-16">
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
@@ -18,37 +19,27 @@ const Hero = () => {
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 pb-12">
-        <div className="max-w-3xl">
-          <h1 className="font-heading text-[7rem] font-bold mb-4 text-white leading-[0.95] tracking-tighter">
-            Clean<br/>
-            Buildings<br/>
-            With Drones
+      {/* Content */}
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl">
+
+          <h1 className="font-heading text-7xl font-bold mb-6 text-primary-foreground leading-tight">
+            Own the Future of Building Maintenance
           </h1>
 
-          <div className="flex gap-3 items-baseline mb-8">
-            <span className="text-5xl font-bold text-white">60%</span>
-            <span className="text-xl text-white/80">cheaper than traditional methods</span>
-          </div>
+          <p className="text-2xl mb-8 text-primary-foreground/90 max-w-2xl leading-relaxed">
+            The SkyWashPro S1 - Industrial cleaning drone that cuts your clients' costs by 60%. Buy once, profit forever.
+          </p>
 
-          <div className="flex gap-4">
-            <Button
-              onClick={scrollToContact}
-              size="lg"
-              className="bg-white text-foreground hover:bg-white/90 px-10 py-6 text-base font-bold"
-            >
-              See Pricing
+          <div className="flex flex-row gap-4">
+            <Button onClick={scrollToContact} variant="hero" size="lg" className="w-auto">
+              Request Demo
             </Button>
-            <Button
-              onClick={scrollToContact}
-              variant="outline"
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-foreground px-10 py-6 text-base font-bold"
-            >
-              Watch Demo
+            <Button onClick={scrollToContact} variant="outline" size="lg" className="w-auto bg-white/10 border-accent text-white hover:bg-accent hover:text-primary backdrop-blur-sm">
+              Get Price Quote
             </Button>
           </div>
         </div>
