@@ -13,13 +13,20 @@ const Hero = () => {
     <section id="hero" className="relative min-h-[70vh] md:min-h-screen flex items-center pt-20 md:pt-32 pb-8 md:pb-16">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Professional drone cleaning building exterior" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70"></div>
+        <img src={heroImage} alt="Professional drone cleaning building exterior" className="w-full h-full object-cover opacity-40" />
+        <div className="absolute inset-0 bg-gradient-sky"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/60 via-transparent to-transparent"></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl">
+
+          <div className="inline-block mb-3 md:mb-4">
+            <span className="text-accent text-sm md:text-base font-semibold tracking-wider uppercase px-4 py-2 bg-accent/10 rounded-full border border-accent/30 backdrop-blur-sm">
+              Revolutionary Cleaning Technology
+            </span>
+          </div>
 
           <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-primary-foreground leading-tight">
             SkyWash S-Series 1
@@ -30,10 +37,10 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-            <Button onClick={scrollToContact} variant="hero" size="lg" className="w-full sm:w-auto">
+            <Button onClick={scrollToContact} size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-glow hover:shadow-glow hover:scale-105 transition-all">
               Request a Quote
             </Button>
-            <Button onClick={scrollToContact} variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-accent text-white hover:bg-accent hover:text-primary backdrop-blur-sm">
+            <Button onClick={scrollToContact} variant="outline" size="lg" className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white hover:text-secondary backdrop-blur-sm font-semibold hover:scale-105 transition-all">
               Schedule Consultation
             </Button>
           </div>
