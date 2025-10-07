@@ -8,112 +8,128 @@ const faqCategories = [
     category: "General Questions",
     questions: [
       {
-        question: "How does drone cleaning actually work?",
-        answer: "Our specialized cleaning drones carry high-pressure water systems (up to 3200 PSI) and cleaning solutions. The drone flies to the target surface and uses precision nozzles to clean while our certified pilots control everything from the ground. Live video feeds ensure thorough coverage and quality control."
+        question: "What exactly does SkyWashPro sell?",
+        answer: "We manufacture and sell the SkyWashPro S1 - an industrial-grade cleaning drone designed for building maintenance companies. You buy the drone, you operate it, you profit from it. We provide the equipment, training, and support."
       },
       {
-        question: "Is drone cleaning as effective as traditional methods?",
-        answer: "Yes, often more effective. Our drones can reach difficult angles that human cleaners struggle with, maintain consistent pressure and coverage, and clean faster without compromising quality. We use the same professional-grade cleaning solutions and pressure levels as traditional methods."
+        question: "Who buys your drones?",
+        answer: "Professional cleaning companies, facility management firms, property maintenance businesses, solar farm operators, wind energy companies, and entrepreneurs starting drone cleaning services. Anyone who wants to offer building cleaning without the risks and costs of traditional methods."
       },
       {
-        question: "What types of buildings can you clean?",
-        answer: "We clean virtually any exterior surface: office buildings, residential towers, shopping centers, solar installations, wind turbines, billboards, industrial facilities, and more. If it's too high or dangerous for traditional cleaning, we can handle it."
+        question: "Do you provide cleaning services?",
+        answer: "No. We sell the drones. You provide the cleaning services to your clients. We're the manufacturer, you're the operator. Think of it like buying a pressure washing truck - we sell you the equipment, you run the business."
       },
       {
-        question: "How much does it cost compared to traditional cleaning?",
-        answer: "Our clients typically save 50-70% compared to traditional methods. You eliminate costs for scaffolding, lifts, extensive insurance, large crews, and downtime. We provide detailed quotes based on your specific project."
+        question: "How much does the drone cost?",
+        answer: "Pricing depends on the package (Starter, Professional, or Enterprise) and any customizations. Contact us for a detailed quote. We also offer financing options for qualified buyers."
+      },
+      {
+        question: "What's the ROI on a SkyWashPro drone?",
+        answer: "Most operators report breaking even within 6-12 months. One high-rise building job can generate $5,000-15,000 in revenue. With lower overhead than traditional methods (no scaffolding, smaller crew, faster completion), your margins are significantly higher."
       }
     ]
   },
   {
-    category: "Safety & Regulations",
+    category: "Product & Technical",
     questions: [
       {
-        question: "Is drone cleaning safe?",
-        answer: "Extremely safe. By eliminating workers at height, we remove the primary risk factor in building maintenance. Our drones operate with multiple safety systems, including GPS positioning, obstacle avoidance, and fail-safe protocols. We maintain a perfect safety record with zero incidents."
+        question: "What's included when I buy the drone?",
+        answer: "The complete system: SkyWashPro S1 drone, 3200 PSI pressure washing system, batteries and charger, control console (15km range), carbon fiber cleaning boom, transport case with tools, pilot training, and warranty coverage. Everything you need to start operating."
       },
       {
-        question: "Are you licensed and insured?",
-        answer: "Yes, fully. We hold all required commercial drone operator licenses, building maintenance permits, and carry comprehensive liability insurance (up to $5 million coverage). We're also bonded and certified by industry safety organizations."
+        question: "How difficult is it to fly?",
+        answer: "If you can operate a pressure washer and fly a consumer drone, you can operate the SkyWashPro S1. We provide comprehensive training (online and optional on-site). Most operators are fully proficient within 2-3 days of training."
       },
       {
-        question: "Do you have permits to fly drones commercially?",
-        answer: "Absolutely. Our pilots are certified by aviation authorities with commercial drone licenses. We handle all flight permits and airspace authorizations for each project. This is included in our service—you don't need to worry about any regulatory compliance."
+        question: "What can the drone clean?",
+        answer: "Any exterior surface: high-rise buildings, solar panels, wind turbines, residential properties, shopping centers, industrial facilities, billboards. If it's too high or dangerous for traditional cleaning, the SkyWashPro S1 can handle it."
       },
       {
-        question: "What about pedestrian safety during cleaning?",
-        answer: "We implement comprehensive ground safety protocols including barrier systems, safety signage, and spotters when needed. Our drones have multiple redundant safety systems to prevent accidents. We can also schedule cleanings during off-hours to minimize any impact."
+        question: "How long does the battery last?",
+        answer: "Each battery provides 30-45 minutes of flight time depending on payload and conditions. We include multiple batteries with each package so you can hot-swap and continue working without interruption."
+      },
+      {
+        question: "What happens if something breaks?",
+        answer: "All drones include warranty coverage. We stock spare parts and offer express repair service (48-hour turnaround). For major repairs, loaner drones are available to keep your business running. We also provide maintenance training so you can handle basic repairs yourself."
+      },
+      {
+        question: "Can I customize the drone for specific tasks?",
+        answer: "Yes. We offer customizations like enhanced night vision, specialized nozzles for different surfaces, extended battery packs, and custom payload configurations. Enterprise packages include custom engineering consultation."
       }
     ]
   },
   {
-    category: "Service Details",
+    category: "Training & Support",
     questions: [
       {
-        question: "How long does a typical cleaning take?",
-        answer: "It varies by project size. A 10-story building typically takes 2-4 hours. A 30-story tower might take 1-2 days. Solar farms depend on panel count but average 50-100 panels per hour. We're generally 5x faster than traditional methods."
+        question: "What training do you provide?",
+        answer: "Every purchase includes: online course covering drone operation and safety, business training on pricing and marketing your services, official SkyWashPro operator certification, and ongoing access to advanced technique webinars. Professional and Enterprise packages include on-site hands-on training."
       },
       {
-        question: "What's included in your service?",
-        answer: "Everything: site survey, risk assessment, all equipment, cleaning solutions, certified pilots, safety protocols, insurance, documentation, and quality inspection. We arrive ready to work and clean up completely when finished."
+        question: "Do I need a drone pilot license?",
+        answer: "In most countries, yes. You'll need a commercial drone operator license from your local aviation authority. We can guide you through the licensing process and requirements for your region. Our training helps prepare you for certification."
       },
       {
-        question: "Do you work in all weather conditions?",
-        answer: "We operate in most conditions but prioritize safety. We avoid high winds (above 25 mph), heavy rain, or extreme temperatures. We monitor weather closely and reschedule if conditions become unsafe. This flexibility is built into our contracts."
+        question: "What kind of support do you offer?",
+        answer: "24/7 technical support hotline, email support (4-hour response time), video call troubleshooting, remote diagnostics, online knowledge base with video tutorials. Professional packages get priority support, Enterprise gets dedicated account managers."
       },
       {
-        question: "Can you clean specific problem areas or do you only do full buildings?",
-        answer: "We handle both. Whether it's spot cleaning graffiti, addressing bird droppings, or maintaining the entire facade, we customize our service to your needs. Minimum project charges may apply for very small jobs."
-      },
-      {
-        question: "How often should buildings be cleaned?",
-        answer: "We recommend quarterly cleaning for most commercial buildings, though frequency depends on location, pollution levels, and building use. Solar panels benefit from monthly cleaning in dusty areas. We can create a maintenance schedule tailored to your property."
+        question: "Can you help us market our drone cleaning service?",
+        answer: "Professional and Enterprise packages include marketing materials, website templates, and business consulting. We share best practices from successful operators worldwide. You'll also join our operator network for peer support and knowledge sharing."
       }
     ]
   },
   {
-    category: "Technical Questions",
+    category: "Business & Operations",
     questions: [
       {
-        question: "Will the pressure washing damage windows or building materials?",
-        answer: "No. We adjust pressure levels based on surface type. Glass gets different treatment than concrete. Our pilots are trained in material science and use appropriate pressure (ranging from 500-3200 PSI) and techniques for each surface."
+        question: "What should we charge clients for drone cleaning?",
+        answer: "Rates vary by region and project complexity, but typical rates are: $2,500-5,000 for small commercial buildings, $5,000-15,000 for high-rises, $800-2,000 for solar cleaning, $3,000-5,000 per wind turbine. We provide pricing guidance during training based on your market."
       },
       {
-        question: "What cleaning solutions do you use?",
-        answer: "Professional, biodegradable cleaning agents approved for commercial use. We select solutions based on your building materials and local environmental regulations. All products are safe for windows, metal, stone, and surrounding landscaping."
+        question: "How many jobs can we do per day?",
+        answer: "Depends on project size. Small buildings take 2-4 hours, so you could do 2-3 per day. Large buildings might be full-day projects. Solar farms vary widely. Most operators schedule 1-2 projects per day to maintain quality and account for travel time."
       },
       {
-        question: "How much water does the process use?",
-        answer: "About 70% less than traditional pressure washing. Our precision targeting and efficient nozzles minimize waste. For a typical building, we use 500-1000 gallons compared to 2000-3000 gallons with traditional methods."
+        question: "Do we need special insurance?",
+        answer: "Yes, you'll need commercial drone insurance and general liability coverage. We can recommend insurance providers who specialize in drone operations. Your insurance costs will be significantly lower than traditional high-altitude work because there's no workers' compensation for height work."
       },
       {
-        question: "Can your drones reach very tall buildings?",
-        answer: "Yes. Our drones operate effectively up to 400 feet (approximately 40 stories) with extended battery systems. For taller structures, we stage operations from rooftops or use multiple battery swaps. There's no practical height limit."
+        question: "Can we operate in all weather?",
+        answer: "The SkyWashPro S1 is built tough, but safety first. Avoid winds above 25 mph, heavy rain, and extreme temperatures. Most operators work 200-250 days per year depending on climate. Weather downtime is much less than traditional methods that require perfect conditions for scaffolding."
       },
       {
-        question: "What happens if the drone malfunctions mid-flight?",
-        answer: "Our drones have multiple redundant systems: backup batteries, emergency landing protocols, and GPS return-to-home features. If any system fails, the drone automatically executes safe landing procedures. In three years of operation, we've never had a drone fail to land safely."
+        question: "What's the maintenance schedule?",
+        answer: "Daily: basic inspection and cleaning (15 minutes). Monthly: detailed system check (1-2 hours). Annually: comprehensive service (we offer this, or you can do it yourself with our training). Regular maintenance ensures maximum uptime and extends equipment life."
       }
     ]
   },
   {
-    category: "Booking & Pricing",
+    category: "Purchasing Process",
     questions: [
       {
-        question: "How do I get a quote?",
-        answer: "Contact us with your building address and cleaning needs. We'll review satellite imagery, may schedule a brief site visit, and provide a detailed quote within 24-48 hours. Quotes are free with no obligation."
+        question: "How do I buy a SkyWashPro drone?",
+        answer: "Contact us through the website for a demo and quote. We'll discuss your needs, recommend a package, provide pricing, and answer questions. Once you decide, we process your order, schedule training, and ship your equipment. Typical delivery is 2-4 weeks."
       },
       {
-        question: "Do you offer contracts or one-time services?",
-        answer: "Both. One-time cleanings for special projects or events, and maintenance contracts with scheduled cleanings at discounted rates. Contract clients get priority scheduling and reduced pricing (typically 15-20% off)."
+        question: "Do you offer financing?",
+        answer: "Yes, we partner with equipment financing companies for qualified buyers. Typical terms range from 24-60 months. Many operators find that revenue from their first few jobs covers monthly payments."
       },
       {
-        question: "What's your cancellation policy?",
-        answer: "We understand weather and business needs change. Cancel or reschedule up to 48 hours before the scheduled service at no charge. Weather-related cancellations never incur fees regardless of timing."
+        question: "Do you ship internationally?",
+        answer: "Yes, worldwide. Shipping is free to UAE, Europe, and North America. International shipping rates vary by destination. We handle customs documentation and provide clearance assistance."
       },
       {
-        question: "Do you require payment upfront?",
-        answer: "For first-time clients, we ask for 50% deposit to schedule the service. The balance is due upon completion and your satisfaction. Contract clients are invoiced monthly with net-30 terms after the first project."
+        question: "What's your warranty?",
+        answer: "Standard package: 1 year full coverage. Professional: 3 years. Enterprise: lifetime warranty available. All warranties cover parts and labor. Extended warranties can be purchased for any package."
+      },
+      {
+        question: "Can we try before we buy?",
+        answer: "We offer product demonstrations where you can see the SkyWashPro S1 in action. For serious buyers, we can arrange hands-on trial sessions. Contact us to schedule a demo in your region."
+      },
+      {
+        question: "What if the drone doesn't work for our business?",
+        answer: "We have a 30-day return policy if the equipment doesn't meet your expectations (conditions apply). However, most buyers find the opposite problem - they wish they'd bought it sooner. We also offer trade-up programs if you start with a Starter package and want to upgrade to Professional later."
       }
     ]
   }
@@ -135,7 +151,7 @@ const FAQ = () => {
                 Frequently Asked Questions
               </h1>
               <p className="text-xl text-primary-foreground/90">
-                Everything you need to know about drone cleaning. Still have questions? We're here to help.
+                Everything you need to know about buying and operating the SkyWashPro S1 drone.
               </p>
             </div>
           </div>
@@ -178,10 +194,10 @@ const FAQ = () => {
                 Still Have Questions?
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Our team is ready to answer any specific questions about your project. No question is too technical or too basic.
+                Our sales team is ready to answer any questions about buying, operating, or maintaining your SkyWashPro S1.
               </p>
               <Button onClick={scrollToContact} variant="hero" size="lg">
-                Contact Us
+                Contact Sales Team
               </Button>
             </div>
           </div>
