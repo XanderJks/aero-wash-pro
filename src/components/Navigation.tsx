@@ -1,7 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import droneLogo from "@/assets/drone.png";
+import droneLogo from "@/assets/Untitled Project(4).png";
 
 const Navigation = () => {
   const location = useLocation();
