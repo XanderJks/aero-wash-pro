@@ -1,5 +1,6 @@
 import { Shield, Zap, DollarSign, Clock, Droplets, CheckCircle } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import droneTechnology from "@/assets/drone-technology.png";
 
 const features = [
@@ -67,7 +68,8 @@ const Features = () => {
         <div className="bg-card rounded-2xl overflow-hidden shadow-elegant p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h3 className="font-heading text-3xl font-bold mb-6">Meet Our Technology</h3>
+              <h3 className="font-heading text-3xl font-bold mb-4">SkyWash S-Series 1</h3>
+              <h4 className="text-xl font-semibold mb-6 text-muted-foreground">Meet Our Technology</h4>
               <p className="text-lg text-muted-foreground mb-6">
                 Our high-tech drones are engineered for precision, reliability, and maximum cleaning performance. Each unit is equipped with:
               </p>
@@ -97,6 +99,17 @@ const Features = () => {
                   <span>2 solid-state batteries with 3KW quick charger</span>
                 </li>
               </ul>
+              <Button 
+                variant="default" 
+                size="lg" 
+                className="mt-8"
+                onClick={() => {
+                  const element = document.getElementById("contact");
+                  if (element) element.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Get More Details
+              </Button>
             </div>
             <div>
               <img src={droneTechnology} alt="Advanced pressure washing drone technology" className="rounded-xl shadow-lg w-full" />

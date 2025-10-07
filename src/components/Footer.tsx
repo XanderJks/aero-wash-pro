@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-heading font-bold text-2xl mb-4">SkyWash</h3>
+            <h3 className="font-heading font-bold text-2xl mb-4">SkyWashPro</h3>
             <p className="text-primary-foreground/80 mb-4">
               Cut cleaning costs up to 60% – safer, faster, smarter. Three year warranty, lifetime maintenance, 24/7 online technical support.
             </p>
@@ -83,7 +83,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-primary-foreground/80">
-            &copy; {new Date().getFullYear()} SkyWash Drones. All rights reserved.
+            &copy; {new Date().getFullYear()} SkyWashPro. All rights reserved.
           </p>
         </div>
       </div>

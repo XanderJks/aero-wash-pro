@@ -1,36 +1,41 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Home, Building2, Sun, MonitorPlay, ShoppingCart, Wind } from "lucide-react";
+import villaImage from "@/assets/industry-villa.jpg";
+import facadeImage from "@/assets/industry-facade.jpg";
+import solarImage from "@/assets/industry-solar.jpg";
+import advertisingImage from "@/assets/industry-advertising.jpg";
+import shoppingImage from "@/assets/industry-shopping.jpg";
+import windImage from "@/assets/industry-wind.jpg";
 
 const industries = [
   {
     title: "Villa",
     description: "Transform your villa's exterior effortlessly with our cleaning drone.",
-    icon: Home,
+    image: villaImage,
   },
   {
     title: "Facade",
     description: "Achieve spotless facades with ease using our cleaning drone.",
-    icon: Building2,
+    image: facadeImage,
   },
   {
     title: "Solar Panel",
     description: "Maximize solar efficiency with a clean solar panel, thanks to our drone.",
-    icon: Sun,
+    image: solarImage,
   },
   {
     title: "Advertising Board",
     description: "Ensure your advertising board shines brightly with our cleaning drone.",
-    icon: MonitorPlay,
+    image: advertisingImage,
   },
   {
     title: "Shopping Malls",
     description: "Keep your supermarket exterior pristine with our powerful cleaning drone.",
-    icon: ShoppingCart,
+    image: shoppingImage,
   },
   {
     title: "Wind Turbine",
     description: "Maintain optimal wind turbine performance with our specialized cleaning drone.",
-    icon: Wind,
+    image: windImage,
   },
 ];
 
@@ -48,20 +53,21 @@ const Industries = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {industries.map((industry) => {
-            const Icon = industry.icon;
-            return (
-              <Card key={industry.title} className="overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary">
-                <CardHeader>
-                  <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg mb-2">{industry.title}</CardTitle>
-                  <CardDescription>{industry.description}</CardDescription>
-                </CardHeader>
-              </Card>
-            );
-          })}
+          {industries.map((industry) => (
+            <Card key={industry.title} className="overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary">
+              <div className="aspect-square overflow-hidden">
+                <img 
+                  src={industry.image} 
+                  alt={industry.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-lg mb-2">{industry.title}</CardTitle>
+                <CardDescription>{industry.description}</CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
