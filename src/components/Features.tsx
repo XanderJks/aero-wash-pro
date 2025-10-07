@@ -38,92 +38,70 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 bg-gradient-to-b from-muted/30 to-background relative">
-      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] opacity-10"></div>
-      <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <div className="inline-block bg-primary/10 px-4 py-1.5 rounded-full mb-6">
-            <span className="text-sm font-semibold text-primary tracking-wide">Why SkyWashPro</span>
-          </div>
-          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            High Places. <span className="text-accent">Zero Hassle.</span>
+    <section id="features" className="py-32 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="mb-20">
+          <h2 className="font-heading text-6xl font-bold mb-4 text-foreground max-w-2xl">
+            Why this works better than traditional cleaning
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Towers, turbines, solar arrays—if it's up there collecting dirt, we'll handle it. No crews dangling from ropes, no lift rentals eating your budget.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-          {features.map((feature, index) => {
+        <div className="grid grid-cols-2 gap-x-20 gap-y-16 mb-32">
+          {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <div
-                key={feature.title}
-                className="group bg-card border border-border rounded-2xl p-8 hover:shadow-card hover:border-primary/20 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="mb-5 inline-flex p-3 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors">
-                  <Icon className="h-7 w-7 text-primary" />
+              <div key={feature.title} className="flex gap-6">
+                <Icon className="h-8 w-8 text-foreground flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-2 text-foreground">{feature.title}</h3>
+                  <p className="text-lg text-foreground/70 leading-relaxed">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-card-foreground font-heading">{feature.title}</h3>
-                <p className="text-base text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             );
           })}
         </div>
 
-        <div className="bg-gradient-to-br from-card via-card to-primary/5 border-2 border-primary/10 rounded-3xl overflow-hidden shadow-elegant">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center p-10 md:p-16">
-            <div className="order-2 lg:order-1">
-              <div className="inline-block bg-accent/10 px-3 py-1 rounded-full mb-4">
-                <span className="text-xs font-bold text-accent tracking-wider uppercase">Industrial Grade</span>
+        <div className="grid grid-cols-5 gap-16 items-start bg-muted/30 p-16">
+          <div className="col-span-2">
+            <img
+              src={droneTechnology}
+              alt="SkyWashPro S1 industrial drone with carbon fiber frame, precision sensors, and 3200 PSI pressure washing system"
+              className="w-full"
+              loading="lazy"
+            />
+          </div>
+          <div className="col-span-3">
+            <h3 className="font-heading text-5xl font-bold mb-6 text-foreground">SkyWashPro S1</h3>
+            <div className="space-y-6 text-lg">
+              <div className="grid grid-cols-2 gap-x-12 gap-y-4">
+                <div>
+                  <div className="font-bold mb-1">Carbon fiber frame</div>
+                  <div className="text-foreground/60">Handles crashes and harsh weather</div>
+                </div>
+                <div>
+                  <div className="font-bold mb-1">3200 PSI pump</div>
+                  <div className="text-foreground/60">100m range</div>
+                </div>
+                <div>
+                  <div className="font-bold mb-1">15 km live video</div>
+                  <div className="text-foreground/60">Watch the clean happen</div>
+                </div>
+                <div>
+                  <div className="font-bold mb-1">Night vision</div>
+                  <div className="text-foreground/60">After-hours operations</div>
+                </div>
+                <div>
+                  <div className="font-bold mb-1">180° rotating nozzle</div>
+                  <div className="text-foreground/60">Reaches any angle</div>
+                </div>
+                <div>
+                  <div className="font-bold mb-1">Hot-swap batteries</div>
+                  <div className="text-foreground/60">No downtime between jobs</div>
+                </div>
               </div>
-              <h3 className="font-heading text-4xl md:text-5xl font-bold mb-3 text-foreground">Built for Real Work</h3>
-              <h4 className="text-2xl font-semibold mb-8 text-primary">SkyWashPro S1</h4>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Industrial-grade drone, proven across hundreds of commercial sites:
-              </p>
-              <ul className="space-y-4 mb-10">
-                <li className="flex items-start gap-3">
-                  <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-base text-foreground">Carbon fiber frame—handles crashes and harsh weather</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-base text-foreground">3200 PSI pump with 100m range</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-base text-foreground">15 km live video—watch the clean happen</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-base text-foreground">Night vision for after-hours operations</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-base text-foreground">180° rotating nozzle reaches any angle</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-0.5 flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-base text-foreground">Hot-swap batteries—no downtime between jobs</span>
-                </li>
-              </ul>
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white shadow-lg px-8 py-6 text-base font-semibold rounded-xl"
+                className="bg-foreground hover:bg-foreground/90 text-background px-10 py-6 text-base font-bold mt-8"
                 onClick={() => {
                   const element = document.getElementById("contact");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
@@ -131,15 +109,6 @@ const Features = () => {
               >
                 Get a Quote
               </Button>
-            </div>
-            <div className="order-1 lg:order-2 relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl opacity-50"></div>
-              <img
-                src={droneTechnology}
-                alt="SkyWashPro S1 industrial drone with carbon fiber frame, precision sensors, and 3200 PSI pressure washing system"
-                className="relative rounded-2xl w-full transform hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
             </div>
           </div>
         </div>

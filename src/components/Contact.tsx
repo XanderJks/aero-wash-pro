@@ -100,27 +100,19 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(195,75,35,0.08),transparent_60%)]"></div>
-      <div className="container mx-auto px-4 relative">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block bg-accent/10 px-4 py-1.5 rounded-full mb-6">
-              <span className="text-sm font-semibold text-accent tracking-wide">Get Started Today</span>
-            </div>
-            <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-foreground">
-              Ready to <span className="text-accent">Buy</span>?
+    <section id="contact" className="py-32 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-16">
+            <h2 className="font-heading text-6xl font-bold mb-4 text-foreground">
+              Get pricing
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Request a demo, get pricing, or talk to our sales team. We ship worldwide.
+            <p className="text-xl text-foreground/60">
+              Our sales team responds within 24 hours
             </p>
           </div>
 
-          <Card className="border-2 border-border shadow-elegant backdrop-blur-sm bg-card/95 rounded-3xl overflow-hidden">
-            <CardHeader className="bg-gradient-to-br from-primary/5 to-transparent pb-8">
-              <CardTitle className="text-3xl font-heading font-bold">Request Product Demo & Pricing</CardTitle>
-              <CardDescription className="text-base mt-3">Our sales team responds within 24 hours with pricing, specs, and demo scheduling.</CardDescription>
-            </CardHeader>
+          <Card className="border-2 border-foreground/10">
             <CardContent className="pt-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-6">
@@ -210,9 +202,9 @@ const Contact = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-accent hover:bg-accent/90 text-white shadow-xl hover:shadow-2xl transition-all py-7 text-lg font-bold rounded-xl"
+                  className="w-full bg-foreground hover:bg-foreground/90 text-white py-6 text-base font-bold"
                 >
-                  Request Demo & Pricing
+                  Send Request
                 </Button>
               </form>
             </CardContent>

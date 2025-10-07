@@ -47,41 +47,29 @@ const industries = [
 
 const Industries = () => {
   return (
-    <section id="industries" className="py-24 bg-muted/20">
+    <section id="industries" className="py-32 bg-foreground text-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <div className="inline-block bg-accent/10 px-4 py-1.5 rounded-full mb-6">
-            <span className="text-sm font-semibold text-accent tracking-wide">Proven Everywhere</span>
-          </div>
-          <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-foreground">
-            Applications
+        <div className="mb-20">
+          <h2 className="font-heading text-6xl font-bold text-background">
+            Who uses this
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Commercial cleaning operations using the SkyWashPro S1
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {industries.map((industry, index) => (
+        <div className="grid grid-cols-3 gap-2">
+          {industries.map((industry) => (
             <div
               key={industry.title}
-              className="group relative overflow-hidden rounded-3xl bg-card border border-border hover:border-primary/30 shadow-sm hover:shadow-elegant transition-all duration-500 hover:-translate-y-2"
-              style={{ animationDelay: `${index * 50}ms` }}
+              className="group relative aspect-[4/3] overflow-hidden"
             >
-              <div className="aspect-[4/3] overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity"></div>
-                <img
-                  src={industry.image}
-                  alt={industry.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  loading="lazy"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-                  <h3 className="font-heading text-2xl font-bold text-white mb-2">{industry.title}</h3>
-                </div>
-              </div>
-              <div className="p-6">
-                <p className="text-muted-foreground leading-relaxed">{industry.description}</p>
+              <img
+                src={industry.image}
+                alt={industry.alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors flex flex-col justify-end p-8">
+                <h3 className="font-heading text-3xl font-bold text-white mb-2">{industry.title}</h3>
+                <p className="text-white/80 text-base">{industry.description}</p>
               </div>
             </div>
           ))}
