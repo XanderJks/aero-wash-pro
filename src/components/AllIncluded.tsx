@@ -8,22 +8,26 @@ const includedItems = [
   {
     title: "CONTROL SYSTEM",
     description: "5.5-inch HD screen, 15km range, night vision, touch controls",
-    image: consoleImage
+    image: consoleImage,
+    alt: "Professional drone control system with 5.5-inch HD screen and 15km range capabilities"
   },
   {
     title: "POWER SYSTEM",
     description: "Two batteries + fast charger, swap and keep working",
-    image: batteriesImage
+    image: batteriesImage,
+    alt: "High-capacity drone battery system with fast charger for continuous operation"
   },
   {
     title: "CLEANING RIG",
     description: "Carbon fiber boom, 3200 PSI pump, 100m water line",
-    image: sprayBoomImage
+    image: sprayBoomImage,
+    alt: "Carbon fiber spray boom with 3200 PSI industrial pressure washing system"
   },
   {
     title: "TRANSPORT CASE",
     description: "Aluminum case with toolkit, ready to travel",
-    image: caseImage
+    image: caseImage,
+    alt: "Professional aluminum transport case with complete toolkit for drone cleaning system"
   }
 ];
 
@@ -41,10 +45,11 @@ const AllIncluded = () => {
           {includedItems.map((item) => (
             <Card key={item.title} className="bg-card/95 backdrop-blur-sm overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
               <div className="aspect-square overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title}
+                <img
+                  src={item.image}
+                  alt={item.alt}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="p-6">

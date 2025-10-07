@@ -11,31 +11,37 @@ const industries = [
     title: "Luxury Homes",
     description: "Your villa deserves better than teenagers on ladders. Professional results, zero risk.",
     image: villaImage,
+    alt: "Luxury villa exterior cleaning with drone pressure washing technology"
   },
   {
     title: "High-Rises",
     description: "Glass towers stay spotless without closing floors or setting up swing stages.",
     image: facadeImage,
+    alt: "High-rise commercial building facade cleaning using advanced drone systems"
   },
   {
     title: "Solar Farms",
     description: "Dirty panels lose 30% efficiency. Clean them fast without touching a single cell.",
     image: solarImage,
+    alt: "Solar panel farm maintenance and cleaning with specialized drone equipment"
   },
   {
     title: "Billboards",
     description: "Highway signs stay bright and readable. No traffic disruption, no crane rentals.",
     image: advertisingImage,
+    alt: "Highway billboard and outdoor advertising sign cleaning by drone"
   },
   {
     title: "Retail Centers",
     description: "Shopping centers look fresh without closing entrances or scaring customers.",
     image: shoppingImage,
+    alt: "Shopping center and retail mall exterior cleaning with minimal disruption"
   },
   {
     title: "Wind Turbines",
     description: "Clean blades spin better. Reach the highest turbines without shutdown time.",
     image: windImage,
+    alt: "Wind turbine blade cleaning and maintenance using drone technology"
   },
 ];
 
@@ -56,10 +62,11 @@ const Industries = () => {
           {industries.map((industry) => (
             <Card key={industry.title} className="overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary">
               <div className="aspect-square overflow-hidden">
-                <img 
-                  src={industry.image} 
-                  alt={industry.title}
+                <img
+                  src={industry.image}
+                  alt={industry.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <CardHeader>

@@ -112,7 +112,12 @@ const Features = () => {
               </Button>
             </div>
             <div>
-              <img src={droneTechnology} alt="Advanced pressure washing drone technology" className="rounded-xl shadow-lg w-full" />
+              <img
+                src={droneTechnology}
+                alt="SkyWashPro S1 industrial drone with carbon fiber frame, precision sensors, and 3200 PSI pressure washing system"
+                className="rounded-xl shadow-lg w-full"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>

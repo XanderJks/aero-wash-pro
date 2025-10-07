@@ -13,7 +13,12 @@ const Hero = () => {
     <section id="hero" className="relative min-h-screen flex items-center pt-32 pb-16">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Professional drone cleaning building exterior" className="w-full h-full object-cover" />
+        <img
+          src={heroImage}
+          alt="Professional drone performing high-altitude building exterior cleaning with pressure washing system"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70"></div>
       </div>
 

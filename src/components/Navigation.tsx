@@ -47,22 +47,69 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="flex items-center gap-8">
-            <button onClick={() => scrollToSection("features")} className="text-foreground hover:text-primary transition-colors font-medium">
-              Features
-            </button>
+          <div className="hidden md:flex items-center gap-8">
+            <Link to="/services" className="text-foreground hover:text-primary transition-colors font-medium">
+              Services
+            </Link>
             <button onClick={() => scrollToSection("industries")} className="text-foreground hover:text-primary transition-colors font-medium">
               Industries
             </button>
             <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
               About
             </Link>
+            <Link to="/faq" className="text-foreground hover:text-primary transition-colors font-medium">
+              FAQ
+            </Link>
             <Button onClick={() => scrollToSection("contact")} variant="hero">
               Get a Quote
             </Button>
           </div>
 
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden py-4 space-y-4 border-t">
+            <Link
+              to="/services"
+              className="block text-foreground hover:text-primary transition-colors font-medium py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </Link>
+            <button
+              onClick={() => scrollToSection("industries")}
+              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+            >
+              Industries
+            </button>
+            <Link
+              to="/about"
+              className="block text-foreground hover:text-primary transition-colors font-medium py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              to="/faq"
+              className="block text-foreground hover:text-primary transition-colors font-medium py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              FAQ
+            </Link>
+            <Button onClick={() => scrollToSection("contact")} variant="hero" className="w-full">
+              Get a Quote
+            </Button>
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -1,17 +1,15 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    window.location.href = `/#${id}`;
   };
 
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-heading font-bold text-2xl mb-4">SkyWashPro</h3>
             <p className="text-primary-foreground/80 mb-4">
@@ -20,26 +18,26 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
+            <h4 className="font-semibold text-lg mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => scrollToSection("features")} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Features
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection("industries")} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Industries
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection("about")} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   About Us
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection("testimonials")} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Testimonials
+                <Link to="/services" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection("contact")} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Contact
                 </button>
               </li>
             </ul>
@@ -48,10 +46,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Services</h4>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li>Building Exterior Cleaning</li>
-              <li>Pressure Washing</li>
-              <li>High-Altitude Maintenance</li>
-              <li>Commercial Facility Care</li>
+              <li>High-Rise Facade Cleaning</li>
+              <li>Solar Panel Maintenance</li>
+              <li>Wind Turbine Cleaning</li>
+              <li>Residential Properties</li>
             </ul>
           </div>
 
@@ -81,10 +79,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 pt-8 text-center">
-          <p className="text-primary-foreground/80">
-            &copy; {new Date().getFullYear()} SkyWashPro. All rights reserved.
-          </p>
+        <div className="border-t border-primary-foreground/20 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-primary-foreground/80 text-sm">
+              &copy; {new Date().getFullYear()} SkyWashPro. All rights reserved.
+            </p>
+            <div className="flex gap-6 text-sm">
+              <Link to="/privacy" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
