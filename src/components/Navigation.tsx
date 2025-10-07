@@ -1,6 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import droneLogo from "@/assets/drone.png";
 
 const Navigation = () => {
   const location = useLocation();
@@ -35,9 +36,10 @@ const Navigation = () => {
 
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <button onClick={() => scrollToSection("hero")} className="font-heading font-bold text-2xl text-primary">
-              SkyWashPro
+          <div className="flex items-center gap-3">
+            <button onClick={() => scrollToSection("hero")} className="flex items-center gap-3 group">
+              <img src={droneLogo} alt="SkyWashPro Logo" className="h-8 w-8 transition-transform group-hover:scale-110" />
+              <span className="font-heading font-bold text-2xl text-primary">SkyWashPro</span>
             </button>
           </div>
 
