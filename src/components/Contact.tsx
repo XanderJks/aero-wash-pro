@@ -100,34 +100,35 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 bg-white">
+    <section id="contact" className="py-32 bg-gradient-to-br from-white via-blue-50/30 to-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 mb-16">
-            <div>
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 text-primary">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-16">
+            <div className="lg:col-span-2">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-10 text-primary leading-[0.95] tracking-tight">
                 Get pricing
               </h2>
-              <p className="text-xl text-gray-700 mb-8">
+              <div className="h-1 w-24 bg-primary mb-10"></div>
+              <p className="text-xl text-gray-700 mb-12 leading-relaxed">
                 Request a demo, specifications, and pricing. Our team responds within 24 hours.
               </p>
-              <div className="space-y-6">
-                <div className="border-l-4 border-accent pl-6">
-                  <div className="font-bold text-primary mb-1">Response Time</div>
-                  <div className="text-gray-700">24 hours or less</div>
+              <div className="space-y-8">
+                <div className="border-l-4 border-primary pl-8 py-4">
+                  <div className="font-bold text-primary mb-2 text-sm tracking-widest">RESPONSE TIME</div>
+                  <div className="text-gray-900 text-lg">24 hours or less</div>
                 </div>
-                <div className="border-l-4 border-accent pl-6">
-                  <div className="font-bold text-primary mb-1">Shipping</div>
-                  <div className="text-gray-700">Worldwide delivery available</div>
+                <div className="border-l-4 border-primary pl-8 py-4">
+                  <div className="font-bold text-primary mb-2 text-sm tracking-widest">SHIPPING</div>
+                  <div className="text-gray-900 text-lg">Worldwide delivery available</div>
                 </div>
-                <div className="border-l-4 border-accent pl-6">
-                  <div className="font-bold text-primary mb-1">Demo</div>
-                  <div className="text-gray-700">Remote or on-site demonstration</div>
+                <div className="border-l-4 border-primary pl-8 py-4">
+                  <div className="font-bold text-primary mb-2 text-sm tracking-widest">DEMO</div>
+                  <div className="text-gray-900 text-lg">Remote or on-site demonstration</div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-50 p-8 border-2 border-gray-200">
+            <div className="lg:col-span-3 bg-white shadow-2xl p-10 border-t-4 border-primary">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -213,7 +214,7 @@ const Contact = () => {
                   {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
                 </div>
 
-                <button type="submit" className="w-full bg-primary text-white px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
+                <button type="submit" className="w-full bg-primary text-white px-10 py-5 font-bold text-sm tracking-wider hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl">
                   SUBMIT REQUEST
                 </button>
               </form>

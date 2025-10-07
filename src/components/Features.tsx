@@ -38,34 +38,38 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-32 bg-gray-50">
+    <section id="features" className="py-32 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold mb-8 text-primary leading-tight">
+        <div className="max-w-4xl mb-24">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-10 text-primary leading-[0.95] tracking-tight">
             Why operators choose SkyWashPro
           </h2>
-          <p className="text-xl text-gray-700 leading-relaxed">
+          <p className="text-2xl text-gray-600 leading-relaxed max-w-2xl">
             No scaffolding rentals. No insurance nightmares. No crews at height. Just results.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 mb-32">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <div key={feature.title} className="border-2 border-gray-200 p-8 hover:border-primary transition-colors">
-                <Icon className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-3 text-primary">{feature.title}</h3>
-                <p className="text-gray-700 leading-relaxed">{feature.description}</p>
+              <div key={feature.title} className="bg-blue-50/50 p-10 hover:bg-primary hover:text-white transition-all duration-300 group cursor-default">
+                <Icon className="h-10 w-10 text-primary mb-6 group-hover:text-white transition-colors" />
+                <h3 className="text-lg font-bold mb-4 text-primary group-hover:text-white transition-colors tracking-wide">{feature.title}</h3>
+                <p className="text-gray-700 leading-relaxed group-hover:text-white/90 transition-colors">{feature.description}</p>
               </div>
             );
           })}
         </div>
 
         {/* Product Showcase */}
-        <div className="bg-white border-2 border-gray-900 p-12 md:p-16">
-          <div className="grid lg:grid-cols-5 gap-16 items-center">
-            <div className="lg:col-span-3">
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 border-4 border-primary p-12 md:p-20 relative">
+          <div className="absolute top-8 right-8 bg-primary text-white px-6 py-3 font-bold tracking-widest text-sm">
+            TECH SPECS
+          </div>
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-primary/10 -z-10"></div>
               <img
                 src={droneTechnology}
                 alt="SkyWashPro S1 industrial drone"
@@ -73,35 +77,31 @@ const Features = () => {
                 loading="lazy"
               />
             </div>
-            <div className="lg:col-span-2">
-              <div className="border-l-4 border-accent pl-8 mb-12">
-                <h3 className="text-3xl font-bold mb-2 text-primary">Tech Specs</h3>
-                <p className="text-gray-700">Built for commercial use</p>
-              </div>
-              <div className="space-y-6">
-                <div className="border-b border-gray-200 pb-4">
-                  <div className="font-bold text-primary mb-1">Frame</div>
-                  <div className="text-gray-700">Carbon fiber composite</div>
+            <div>
+              <div className="space-y-8">
+                <div className="border-l-4 border-primary pl-6 py-2">
+                  <div className="font-bold text-primary mb-1 text-sm tracking-wider">FRAME</div>
+                  <div className="text-gray-900 text-lg">Carbon fiber composite</div>
                 </div>
-                <div className="border-b border-gray-200 pb-4">
-                  <div className="font-bold text-primary mb-1">Pressure</div>
-                  <div className="text-gray-700">3200 PSI, variable control</div>
+                <div className="border-l-4 border-primary pl-6 py-2">
+                  <div className="font-bold text-primary mb-1 text-sm tracking-wider">PRESSURE</div>
+                  <div className="text-gray-900 text-lg">3200 PSI, variable control</div>
                 </div>
-                <div className="border-b border-gray-200 pb-4">
-                  <div className="font-bold text-primary mb-1">Range</div>
-                  <div className="text-gray-700">100m water line, 15km video</div>
+                <div className="border-l-4 border-primary pl-6 py-2">
+                  <div className="font-bold text-primary mb-1 text-sm tracking-wider">RANGE</div>
+                  <div className="text-gray-900 text-lg">100m water line, 15km video</div>
                 </div>
-                <div className="border-b border-gray-200 pb-4">
-                  <div className="font-bold text-primary mb-1">Nozzle</div>
-                  <div className="text-gray-700">180° rotation, multi-angle</div>
+                <div className="border-l-4 border-primary pl-6 py-2">
+                  <div className="font-bold text-primary mb-1 text-sm tracking-wider">NOZZLE</div>
+                  <div className="text-gray-900 text-lg">180° rotation, multi-angle</div>
                 </div>
-                <div className="border-b border-gray-200 pb-4">
-                  <div className="font-bold text-primary mb-1">Vision</div>
-                  <div className="text-gray-700">Night vision, thermal imaging</div>
+                <div className="border-l-4 border-primary pl-6 py-2">
+                  <div className="font-bold text-primary mb-1 text-sm tracking-wider">VISION</div>
+                  <div className="text-gray-900 text-lg">Night vision, thermal imaging</div>
                 </div>
-                <div className="pb-4">
-                  <div className="font-bold text-primary mb-1">Battery</div>
-                  <div className="text-gray-700">Hot-swap system, dual pack</div>
+                <div className="border-l-4 border-primary pl-6 py-2">
+                  <div className="font-bold text-primary mb-1 text-sm tracking-wider">BATTERY</div>
+                  <div className="text-gray-900 text-lg">Hot-swap system, dual pack</div>
                 </div>
               </div>
             </div>

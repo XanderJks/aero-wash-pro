@@ -33,50 +33,51 @@ const includedItems = [
 
 const AllIncluded = () => {
   return (
-    <section className="py-32 bg-gray-900 text-white">
+    <section className="py-32 bg-primary text-white">
       <div className="container mx-auto px-4">
-        <div className="mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold mb-4">
+        <div className="mb-24">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[0.95] tracking-tight">
             Complete system
           </h2>
-          <p className="text-xl text-gray-400">Everything shipped in one case</p>
+          <div className="h-1 w-32 bg-white"></div>
+          <p className="text-2xl text-white/80 mt-8">Everything shipped in one case</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-32">
           {includedItems.map((item) => (
-            <div key={item.title} className="bg-gray-800 overflow-hidden group cursor-pointer">
+            <div key={item.title} className="bg-white/5 backdrop-blur-sm overflow-hidden group cursor-pointer hover:bg-white/10 transition-all">
               <div className="aspect-square overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   loading="lazy"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="font-bold text-sm mb-2 tracking-wider text-accent">{item.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{item.description}</p>
+              <div className="p-8">
+                <h3 className="font-bold text-sm mb-3 tracking-widest text-white">{item.title}</h3>
+                <p className="text-sm text-white/70 leading-relaxed">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Support Section */}
-        <div className="grid md:grid-cols-3 gap-12 border-t border-gray-700 pt-16">
-          <div>
-            <div className="text-6xl font-bold text-accent mb-4">01</div>
-            <h4 className="font-bold text-xl mb-3">Training Included</h4>
-            <p className="text-gray-400">Full operator training with every purchase. Remote or on-site.</p>
+        <div className="grid md:grid-cols-3 gap-1">
+          <div className="bg-white/10 backdrop-blur-sm p-12 hover:bg-white/15 transition-all">
+            <div className="text-7xl font-bold text-white mb-6">01</div>
+            <h4 className="font-bold text-2xl mb-4 tracking-tight">Training Included</h4>
+            <p className="text-white/80 text-lg">Full operator training with every purchase. Remote or on-site.</p>
           </div>
-          <div>
-            <div className="text-6xl font-bold text-accent mb-4">02</div>
-            <h4 className="font-bold text-xl mb-3">24/7 Support</h4>
-            <p className="text-gray-400">Direct line to our engineering team. Any time, any timezone.</p>
+          <div className="bg-white/10 backdrop-blur-sm p-12 hover:bg-white/15 transition-all">
+            <div className="text-7xl font-bold text-white mb-6">02</div>
+            <h4 className="font-bold text-2xl mb-4 tracking-tight">24/7 Support</h4>
+            <p className="text-white/80 text-lg">Direct line to our engineering team. Any time, any timezone.</p>
           </div>
-          <div>
-            <div className="text-6xl font-bold text-accent mb-4">03</div>
-            <h4 className="font-bold text-xl mb-3">3-Year Warranty</h4>
-            <p className="text-gray-400">Full coverage. Extended maintenance plans available.</p>
+          <div className="bg-white/10 backdrop-blur-sm p-12 hover:bg-white/15 transition-all">
+            <div className="text-7xl font-bold text-white mb-6">03</div>
+            <h4 className="font-bold text-2xl mb-4 tracking-tight">3-Year Warranty</h4>
+            <p className="text-white/80 text-lg">Full coverage. Extended maintenance plans available.</p>
           </div>
         </div>
       </div>
