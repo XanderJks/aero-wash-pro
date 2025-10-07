@@ -100,24 +100,23 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 bg-secondary/30 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="contact" className="py-24 bg-background">
+      <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              Ready to <span className="text-accent">Buy</span>?
+          <div className="text-center mb-16">
+            <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">CONTACT SALES</div>
+            <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
+              Request Information
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Request a demo, get pricing, or talk to our sales team. We ship worldwide.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Schedule product demonstration and receive detailed technical specifications and pricing.
             </p>
           </div>
 
-          <Card className="border-2">
-            <CardHeader>
-              <CardTitle>Request Product Demo & Pricing</CardTitle>
-              <CardDescription>Our sales team responds within 24 hours with pricing, specs, and demo scheduling.</CardDescription>
+          <Card className="border border-border rounded-sm">
+            <CardHeader className="pb-8">
+              <CardTitle className="text-2xl font-bold">Product Inquiry Form</CardTitle>
+              <CardDescription className="text-base">Sales team response within 24 hours for technical specifications and pricing information.</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -129,7 +128,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={(e) => handleChange("name", e.target.value)}
                       placeholder="John Smith"
-                      className={errors.name ? "border-destructive" : ""}
+                      className={errors.name ? "border-destructive" : "border-border"}
                     />
                     {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
                   </div>
@@ -142,7 +141,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={(e) => handleChange("email", e.target.value)}
                       placeholder="john@company.com"
-                      className={errors.email ? "border-destructive" : ""}
+                      className={errors.email ? "border-destructive" : "border-border"}
                     />
                     {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
                   </div>
@@ -154,7 +153,7 @@ const Contact = () => {
                       value={formData.company}
                       onChange={(e) => handleChange("company", e.target.value)}
                       placeholder="Your Company Inc."
-                      className={errors.company ? "border-destructive" : ""}
+                      className={errors.company ? "border-destructive" : "border-border"}
                     />
                     {errors.company && <p className="text-sm text-destructive">{errors.company}</p>}
                   </div>
@@ -167,7 +166,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={(e) => handleChange("phone", e.target.value)}
                       placeholder="+1 (234) 567-890"
-                      className={errors.phone ? "border-destructive" : ""}
+                      className={errors.phone ? "border-destructive" : "border-border"}
                     />
                     {errors.phone && <p className="text-sm text-destructive">{errors.phone}</p>}
                   </div>
@@ -176,8 +175,8 @@ const Contact = () => {
                 <div className="space-y-2">
                   <Label htmlFor="industry">Industry *</Label>
                   <Select value={formData.industry} onValueChange={(value) => handleChange("industry", value)}>
-                    <SelectTrigger className={errors.industry ? "border-destructive" : ""}>
-                      <SelectValue placeholder="Select your industry" />
+                    <SelectTrigger className={errors.industry ? "border-destructive" : "border-border"}>
+                      <SelectValue placeholder="Select industry" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="cleaning-service">Building Cleaning Service</SelectItem>
@@ -200,13 +199,13 @@ const Contact = () => {
                     onChange={(e) => handleChange("message", e.target.value)}
                     placeholder="What type of cleaning business do you run? How many buildings do you service monthly? Are you starting new or expanding?"
                     rows={5}
-                    className={errors.message ? "border-destructive" : ""}
+                    className={errors.message ? "border-destructive" : "border-border"}
                   />
                   {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
                 </div>
 
-                <Button type="submit" variant="hero" size="lg" className="w-full">
-                  Request Demo & Pricing
+                <Button type="submit" size="lg" className="w-full bg-foreground text-background hover:bg-foreground/90 h-12">
+                  Submit Inquiry
                 </Button>
               </form>
             </CardContent>

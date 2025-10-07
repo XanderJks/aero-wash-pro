@@ -9,57 +9,40 @@ const VideoDemo = () => {
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
-    <section className="py-20 bg-white relative">
-      <div className="absolute -bottom-16 left-0 w-full h-32 bg-primary transform -skew-y-2 z-0"></div>
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-24 bg-background relative">
+      <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="inline-flex items-center gap-1 mb-4">
-                <Star className="h-4 w-4 fill-accent text-accent" />
-                <Star className="h-4 w-4 fill-accent text-accent" />
-                <Star className="h-4 w-4 fill-accent text-accent" />
-                <Star className="h-4 w-4 fill-accent text-accent" />
-                <Star className="h-4 w-4 fill-accent text-accent" />
-                <span className="ml-2 text-sm text-gray-600">Trusted by 200+ contractors</span>
-              </div>
+              <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">DEMONSTRATION</div>
 
-              <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-primary">
-                Watch It Work
+              <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
+                System in Operation
               </h2>
 
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Real footage from a downtown Chicago job. 20 stories, 3 hours start to finish. Client saved $18,000 vs traditional methods.
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Real deployment footage from commercial high-rise cleaning operation. 20-story building completed in 3 hours.
               </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2"></div>
-                  <div>
-                    <span className="font-semibold text-primary">No crew risk:</span>
-                    <span className="text-gray-600"> All work done from ground level</span>
-                  </div>
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-3 text-sm">
+                  <div className="w-1 h-1 bg-foreground rounded-full"></div>
+                  <span className="text-foreground">Ground-based operations eliminate height work</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2"></div>
-                  <div>
-                    <span className="font-semibold text-primary">No scaffolding:</span>
-                    <span className="text-gray-600"> Zero setup time or rental costs</span>
-                  </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <div className="w-1 h-1 bg-foreground rounded-full"></div>
+                  <span className="text-foreground">No access equipment or permits required</span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2"></div>
-                  <div>
-                    <span className="font-semibold text-primary">No downtime:</span>
-                    <span className="text-gray-600"> Building stays operational during cleaning</span>
-                  </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <div className="w-1 h-1 bg-foreground rounded-full"></div>
+                  <span className="text-foreground">Building remains operational during cleaning</span>
                 </div>
               </div>
 
-              <div className="bg-gray-50 border-l-4 border-accent p-6">
-                <p className="text-sm text-gray-600 mb-2">AVERAGE PROJECT SAVINGS</p>
-                <p className="text-3xl font-bold text-primary">$15,000 - $25,000</p>
-                <p className="text-sm text-gray-500 mt-1">per 20-story building vs traditional cleaning</p>
+              <div className="bg-secondary border-l-2 border-foreground p-6 rounded-sm">
+                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">PROJECT ECONOMICS</p>
+                <p className="text-3xl font-bold text-foreground">$15,000 - $25,000</p>
+                <p className="text-sm text-muted-foreground mt-1">Average savings per 20-story building</p>
               </div>
             </div>
 
@@ -67,7 +50,7 @@ const VideoDemo = () => {
               <div className="relative">
                 {!isVideoOpen ? (
                   <div
-                    className="relative overflow-hidden cursor-pointer group bg-gray-100"
+                    className="relative overflow-hidden cursor-pointer group bg-muted border border-border rounded-sm"
                     onClick={() => setIsVideoOpen(true)}
                   >
                     <div className="aspect-[4/3] relative">
@@ -76,16 +59,16 @@ const VideoDemo = () => {
                         alt="SkyWashPro drone cleaning demonstration video"
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
 
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="bg-white rounded-full p-6 shadow-lg group-hover:scale-105 transition-transform">
-                          <Play className="h-10 w-10 text-primary ml-1" />
+                        <div className="bg-foreground rounded-sm p-6 group-hover:scale-105 transition-transform">
+                          <Play className="h-10 w-10 text-background ml-1" fill="currentColor" />
                         </div>
                       </div>
 
-                      <div className="absolute top-4 left-4 bg-accent text-primary px-3 py-1 text-sm font-bold">
-                        3 MIN WATCH
+                      <div className="absolute top-4 left-4 bg-foreground text-background px-3 py-1 text-xs font-semibold uppercase tracking-wider">
+                        3 MIN
                       </div>
                     </div>
                   </div>
@@ -103,7 +86,7 @@ const VideoDemo = () => {
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="absolute top-4 right-4 h-10 w-10 rounded-full bg-black/70 hover:bg-black text-white"
+                      className="absolute top-4 right-4 h-10 w-10 rounded-sm bg-foreground/90 hover:bg-foreground text-background"
                       onClick={() => setIsVideoOpen(false)}
                     >
                       <X className="h-5 w-5" />
@@ -113,17 +96,17 @@ const VideoDemo = () => {
               </div>
 
               <div className="grid grid-cols-3 gap-4 mt-6">
-                <div className="text-center p-4 bg-gray-50">
-                  <div className="text-2xl font-bold text-primary">3h</div>
-                  <div className="text-xs text-gray-600 mt-1">Job time</div>
+                <div className="text-center p-4 bg-secondary border border-border rounded-sm">
+                  <div className="text-2xl font-bold text-foreground">3h</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Duration</div>
                 </div>
-                <div className="text-center p-4 bg-gray-50">
-                  <div className="text-2xl font-bold text-primary">0</div>
-                  <div className="text-xs text-gray-600 mt-1">Incidents</div>
+                <div className="text-center p-4 bg-secondary border border-border rounded-sm">
+                  <div className="text-2xl font-bold text-foreground">0</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Incidents</div>
                 </div>
-                <div className="text-center p-4 bg-gray-50">
-                  <div className="text-2xl font-bold text-primary">60%</div>
-                  <div className="text-xs text-gray-600 mt-1">Cheaper</div>
+                <div className="text-center p-4 bg-secondary border border-border rounded-sm">
+                  <div className="text-2xl font-bold text-foreground">60%</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Savings</div>
                 </div>
               </div>
             </div>
