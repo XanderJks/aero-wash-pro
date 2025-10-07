@@ -100,35 +100,24 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 bg-gradient-to-br from-white via-blue-50/30 to-white">
+    <section id="contact" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-5 gap-16">
-            <div className="lg:col-span-2">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-10 text-primary leading-[0.95] tracking-tight">
-                Get pricing
-              </h2>
-              <div className="h-1 w-24 bg-primary mb-10"></div>
-              <p className="text-xl text-gray-700 mb-12 leading-relaxed">
-                Request a demo, specifications, and pricing. Our team responds within 24 hours.
-              </p>
-              <div className="space-y-8">
-                <div className="border-l-4 border-primary pl-8 py-4">
-                  <div className="font-bold text-primary mb-2 text-sm tracking-widest">RESPONSE TIME</div>
-                  <div className="text-gray-900 text-lg">24 hours or less</div>
-                </div>
-                <div className="border-l-4 border-primary pl-8 py-4">
-                  <div className="font-bold text-primary mb-2 text-sm tracking-widest">SHIPPING</div>
-                  <div className="text-gray-900 text-lg">Worldwide delivery available</div>
-                </div>
-                <div className="border-l-4 border-primary pl-8 py-4">
-                  <div className="font-bold text-primary mb-2 text-sm tracking-widest">DEMO</div>
-                  <div className="text-gray-900 text-lg">Remote or on-site demonstration</div>
-                </div>
-              </div>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              Ready to <span className="text-accent">Buy</span>?
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Request a demo, get pricing, or talk to our sales team. We ship worldwide.
+            </p>
+          </div>
 
-            <div className="lg:col-span-3 bg-white shadow-2xl p-10 border-t-4 border-primary">
+          <Card className="border-2">
+            <CardHeader>
+              <CardTitle>Request Product Demo & Pricing</CardTitle>
+              <CardDescription>Our sales team responds within 24 hours with pricing, specs, and demo scheduling.</CardDescription>
+            </CardHeader>
+            <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -214,12 +203,12 @@ const Contact = () => {
                   {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
                 </div>
 
-                <button type="submit" className="w-full bg-primary text-white px-10 py-5 font-bold text-sm tracking-wider hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl">
-                  SUBMIT REQUEST
-                </button>
+                <Button type="submit" variant="hero" size="lg" className="w-full">
+                  Request Demo & Pricing
+                </Button>
               </form>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

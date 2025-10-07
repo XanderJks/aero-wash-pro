@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Play, X } from "lucide-react";
+import { Play, X, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const VideoDemo = () => {
@@ -14,6 +14,15 @@ const VideoDemo = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
+              <div className="inline-flex items-center gap-1 mb-4">
+                <Star className="h-4 w-4 fill-accent text-accent" />
+                <Star className="h-4 w-4 fill-accent text-accent" />
+                <Star className="h-4 w-4 fill-accent text-accent" />
+                <Star className="h-4 w-4 fill-accent text-accent" />
+                <Star className="h-4 w-4 fill-accent text-accent" />
+                <span className="ml-2 text-sm text-gray-600">Trusted by 200+ contractors</span>
+              </div>
+
               <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-primary">
                 Watch It Work
               </h2>
@@ -22,7 +31,7 @@ const VideoDemo = () => {
                 Real footage from a downtown Chicago job. 20 stories, 3 hours start to finish. Client saved $18,000 vs traditional methods.
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2"></div>
                   <div>
@@ -44,6 +53,12 @@ const VideoDemo = () => {
                     <span className="text-gray-600"> Building stays operational during cleaning</span>
                   </div>
                 </div>
+              </div>
+
+              <div className="bg-gray-50 border-l-4 border-accent p-6">
+                <p className="text-sm text-gray-600 mb-2">AVERAGE PROJECT SAVINGS</p>
+                <p className="text-3xl font-bold text-primary">$15,000 - $25,000</p>
+                <p className="text-sm text-gray-500 mt-1">per 20-story building vs traditional cleaning</p>
               </div>
             </div>
 

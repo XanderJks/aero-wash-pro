@@ -27,28 +27,36 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-32 bg-gradient-to-b from-blue-50 to-white">
+    <section id="testimonials" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="mb-24">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-primary max-w-3xl leading-[0.95] tracking-tight">
-            What operators say
+        <div className="text-center mb-16">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Trusted by Industry Leaders
           </h2>
-          <div className="h-1 w-32 bg-primary"></div>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            See what our clients say about their experience with SkyWashPro
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-1 max-w-6xl">
-          {testimonials.map((testimonial, index) => (
-            <div key={testimonial.name} className="bg-white p-12 hover:bg-primary hover:text-white transition-all duration-300 group">
-              <div className="text-6xl font-bold text-primary/20 group-hover:text-white/20 mb-6">"</div>
-              <p className="text-xl text-gray-900 group-hover:text-white mb-10 leading-relaxed">
-                {testimonial.content}
-              </p>
-              <div className="border-t-2 border-gray-200 group-hover:border-white/30 pt-6">
-                <p className="font-bold text-primary group-hover:text-white text-lg mb-1">{testimonial.name}</p>
-                <p className="text-gray-600 group-hover:text-white/80 text-sm">{testimonial.position}</p>
-                <p className="text-gray-600 group-hover:text-white/80 text-sm">{testimonial.company}</p>
-              </div>
-            </div>
+        <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial) => (
+            <Card key={testimonial.name} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-card">
+              <CardHeader>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-accent text-accent" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-foreground/90 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                <div className="border-t pt-4">
+                  <p className="font-semibold text-foreground">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

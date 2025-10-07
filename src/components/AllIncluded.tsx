@@ -33,51 +33,52 @@ const includedItems = [
 
 const AllIncluded = () => {
   return (
-    <section className="py-32 bg-primary text-white">
+    <section className="py-20 bg-primary">
       <div className="container mx-auto px-4">
-        <div className="mb-24">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[0.95] tracking-tight">
-            Complete system
+        <div className="text-center mb-12">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-white">
+            Everything <span className="text-accent">You Need</span>
           </h2>
-          <div className="h-1 w-32 bg-white"></div>
-          <p className="text-2xl text-white/80 mt-8">Everything shipped in one case</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-32">
+        <div className="grid grid-cols-4 gap-6">
           {includedItems.map((item) => (
-            <div key={item.title} className="bg-white/5 backdrop-blur-sm overflow-hidden group cursor-pointer hover:bg-white/10 transition-all">
+            <Card key={item.title} className="bg-card/95 backdrop-blur-sm overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
               <div className="aspect-square overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
-              <div className="p-8">
-                <h3 className="font-bold text-sm mb-3 tracking-widest text-white">{item.title}</h3>
-                <p className="text-sm text-white/70 leading-relaxed">{item.description}</p>
+              <div className="p-6">
+                <h3 className="font-bold text-lg mb-3 text-foreground leading-tight">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
 
         {/* Support Section */}
-        <div className="grid md:grid-cols-3 gap-1">
-          <div className="bg-white/10 backdrop-blur-sm p-12 hover:bg-white/15 transition-all">
-            <div className="text-7xl font-bold text-white mb-6">01</div>
-            <h4 className="font-bold text-2xl mb-4 tracking-tight">Training Included</h4>
-            <p className="text-white/80 text-lg">Full operator training with every purchase. Remote or on-site.</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm p-12 hover:bg-white/15 transition-all">
-            <div className="text-7xl font-bold text-white mb-6">02</div>
-            <h4 className="font-bold text-2xl mb-4 tracking-tight">24/7 Support</h4>
-            <p className="text-white/80 text-lg">Direct line to our engineering team. Any time, any timezone.</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm p-12 hover:bg-white/15 transition-all">
-            <div className="text-7xl font-bold text-white mb-6">03</div>
-            <h4 className="font-bold text-2xl mb-4 tracking-tight">3-Year Warranty</h4>
-            <p className="text-white/80 text-lg">Full coverage. Extended maintenance plans available.</p>
+        <div className="mt-16 bg-card rounded-2xl p-8 md:p-12 shadow-elegant">
+          <h3 className="font-heading text-3xl font-bold mb-8 text-center">We've Got Your Back</h3>
+          <div className="grid grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-4xl mb-4">✓</div>
+              <h4 className="font-semibold text-lg mb-2">Training Included</h4>
+              <p className="text-muted-foreground">We teach your team how to fly and clean safely</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">✓</div>
+              <h4 className="font-semibold text-lg mb-2">24/7 Support</h4>
+              <p className="text-muted-foreground">Something breaks at 3 AM? We answer.</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl mb-4">✓</div>
+              <h4 className="font-semibold text-lg mb-2">3-Year Warranty</h4>
+              <p className="text-muted-foreground">Full coverage, lifetime maintenance available</p>
+            </div>
           </div>
         </div>
       </div>
