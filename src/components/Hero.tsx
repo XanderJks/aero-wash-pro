@@ -11,9 +11,23 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-[70vh] md:min-h-screen flex items-center pt-20 md:pt-32 pb-8 md:pb-16">
-      {/* Background Image with Overlay */}
+      {/* Background Video with Overlay */}
       <div className="absolute inset-0 z-0">
+        {/* Fallback image */}
         <img src={heroImage} alt="Professional drone cleaning building exterior" className="w-full h-full object-cover opacity-40" />
+        
+        {/* Video element - replace the src with your actual video file */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
+        >
+          <source src="/videos/drone-cleaning.mp4" type="video/mp4" />
+          {/* Add more source formats if needed */}
+        </video>
+        
         <div className="absolute inset-0 bg-gradient-sky"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/60 via-transparent to-transparent"></div>
       </div>
