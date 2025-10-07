@@ -20,9 +20,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-primary/10 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
       {/* Top Contact Bar */}
-      <div className="bg-gradient-sky text-primary-foreground">
+      <div className="bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 py-2">
           <div className="flex justify-end items-center gap-6 text-sm">
             <a href="mailto:info@skywash.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
@@ -41,7 +41,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <button onClick={() => scrollToSection("hero")} className="font-heading font-bold text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:scale-105 transition-transform">
+            <button onClick={() => scrollToSection("hero")} className="font-heading font-bold text-2xl text-primary">
               SkyWash
             </button>
           </div>
@@ -57,7 +57,7 @@ const Navigation = () => {
             <Link to="/about" className="text-foreground hover:text-primary transition-colors font-medium">
               About
             </Link>
-            <Button onClick={() => scrollToSection("contact")} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-sm hover:shadow-glow hover:scale-105 transition-all">
+            <Button onClick={() => scrollToSection("contact")} variant="hero">
               Get a Quote
             </Button>
           </div>
@@ -81,7 +81,7 @@ const Navigation = () => {
               <Link to="/about" className="text-left py-2 hover:text-primary transition-colors font-medium" onClick={() => setIsOpen(false)}>
                 About
               </Link>
-              <Button onClick={() => scrollToSection("contact")} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+              <Button onClick={() => scrollToSection("contact")} variant="hero" className="w-full">
                 Get a Quote
               </Button>
             </div>

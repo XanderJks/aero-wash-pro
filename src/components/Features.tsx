@@ -37,18 +37,9 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-20 bg-gradient-sky relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="features" className="py-20 bg-primary">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-block mb-4">
-            <span className="text-accent text-sm md:text-base font-semibold tracking-wider uppercase">
-              Complete Solutions
-            </span>
-          </div>
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-white">
             Allround. <span className="text-accent">Everywhere.</span>
           </h2>
@@ -58,12 +49,12 @@ const Features = () => {
         </div>
 
         <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8 mb-16">
-          {features.map((feature, index) => {
+          {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <div key={feature.title} className="text-center group">
-                <div className="mb-4 mx-auto flex items-center justify-center w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 group-hover:bg-accent/20 group-hover:border-accent/40 transition-all duration-300 group-hover:scale-110">
-                  <Icon className="h-8 w-8 text-accent" />
+              <div key={feature.title} className="text-center">
+                <div className="mb-4 mx-auto flex items-center justify-center">
+                  <Icon className="h-12 w-12 text-primary-foreground" />
                 </div>
                 <h3 className="text-lg font-semibold mb-3 text-primary-foreground">{feature.title}</h3>
                 <p className="text-sm text-primary-foreground/80 leading-relaxed">{feature.description}</p>
@@ -73,7 +64,7 @@ const Features = () => {
         </div>
 
         {/* Product Showcase */}
-        <div className="bg-card rounded-3xl overflow-hidden shadow-elegant border border-accent/10 p-8 md:p-12 hover:shadow-glow transition-all duration-500">
+        <div className="bg-card rounded-2xl overflow-hidden shadow-elegant p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h3 className="font-heading text-3xl font-bold mb-6">Meet Our Technology</h3>
