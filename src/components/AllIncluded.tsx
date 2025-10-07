@@ -37,7 +37,7 @@ const AllIncluded = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-4 gap-6">
           {includedItems.map((item) => (
             <Card key={item.title} className="bg-card/95 backdrop-blur-sm overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
               <div className="aspect-square overflow-hidden">
@@ -58,7 +58,7 @@ const AllIncluded = () => {
         {/* Support Section */}
         <div className="mt-16 bg-card rounded-2xl p-8 md:p-12 shadow-elegant">
           <h3 className="font-heading text-3xl font-bold mb-8 text-center">We've Got Your Back</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-6">
             <div className="text-center">
               <div className="text-4xl mb-4">✓</div>
               <h4 className="font-semibold text-lg mb-2">Training Included</h4>

@@ -27,11 +27,11 @@ const Navigation = () => {
           <div className="flex justify-end items-center gap-6 text-sm">
             <a href="mailto:info@skywash.com" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Mail className="h-4 w-4" />
-              <span className="hidden sm:inline">info@skywash.com</span>
+              <span>info@skywash.com</span>
             </a>
             <a href="tel:+1234567890" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Phone className="h-4 w-4" />
-              <span className="hidden sm:inline">+1 (234) 567-890</span>
+              <span>+1 (234) 567-890</span>
             </a>
           </div>
         </div>
@@ -47,7 +47,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="flex items-center gap-8">
             <button onClick={() => scrollToSection("features")} className="text-foreground hover:text-primary transition-colors font-medium">
               Features
             </button>
@@ -62,31 +62,7 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t">
-            <div className="flex flex-col gap-4">
-              <button onClick={() => scrollToSection("features")} className="text-left py-2 hover:text-primary transition-colors font-medium">
-                Features
-              </button>
-              <button onClick={() => scrollToSection("industries")} className="text-left py-2 hover:text-primary transition-colors font-medium">
-                Industries
-              </button>
-              <Link to="/about" className="text-left py-2 hover:text-primary transition-colors font-medium" onClick={() => setIsOpen(false)}>
-                About
-              </Link>
-              <Button onClick={() => scrollToSection("contact")} variant="hero" className="w-full">
-                Get a Quote
-              </Button>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );

@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-heading font-bold text-2xl mb-4">SkyWashPro</h3>
             <p className="text-primary-foreground/80 mb-4">

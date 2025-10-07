@@ -52,7 +52,7 @@ const Industries = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-3 gap-6">
           {industries.map((industry) => (
             <Card key={industry.title} className="overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary">
               <div className="aspect-square overflow-hidden">
