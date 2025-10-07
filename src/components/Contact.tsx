@@ -100,24 +100,28 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-24 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(195,75,35,0.08),transparent_60%)]"></div>
+      <div className="container mx-auto px-4 relative">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-accent/10 px-4 py-1.5 rounded-full mb-6">
+              <span className="text-sm font-semibold text-accent tracking-wide">Get Started Today</span>
+            </div>
+            <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-foreground">
               Ready to <span className="text-accent">Buy</span>?
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Request a demo, get pricing, or talk to our sales team. We ship worldwide.
             </p>
           </div>
 
-          <Card className="border-2">
-            <CardHeader>
-              <CardTitle>Request Product Demo & Pricing</CardTitle>
-              <CardDescription>Our sales team responds within 24 hours with pricing, specs, and demo scheduling.</CardDescription>
+          <Card className="border-2 border-border shadow-elegant backdrop-blur-sm bg-card/95 rounded-3xl overflow-hidden">
+            <CardHeader className="bg-gradient-to-br from-primary/5 to-transparent pb-8">
+              <CardTitle className="text-3xl font-heading font-bold">Request Product Demo & Pricing</CardTitle>
+              <CardDescription className="text-base mt-3">Our sales team responds within 24 hours with pricing, specs, and demo scheduling.</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -203,7 +207,11 @@ const Contact = () => {
                   {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
                 </div>
 
-                <Button type="submit" variant="hero" size="lg" className="w-full">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full bg-accent hover:bg-accent/90 text-white shadow-xl hover:shadow-2xl transition-all py-7 text-lg font-bold rounded-xl"
+                >
                   Request Demo & Pricing
                 </Button>
               </form>
