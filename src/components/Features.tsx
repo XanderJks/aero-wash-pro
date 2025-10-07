@@ -1,6 +1,6 @@
 import { Shield, Zap, DollarSign, Clock, Droplets, CheckCircle } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import droneProduct from "@/assets/drone-product.jpg";
+import droneTechnology from "@/assets/drone-technology.png";
 
 const features = [
   {
@@ -99,7 +99,7 @@ const Features = () => {
               </ul>
             </div>
             <div>
-              <img src={droneProduct} alt="Advanced pressure washing drone technology" className="rounded-xl shadow-lg w-full" />
+              <img src={droneTechnology} alt="Advanced pressure washing drone technology" className="rounded-xl shadow-lg w-full" />
             </div>
           </div>
         </div>
