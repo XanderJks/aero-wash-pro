@@ -1,29 +1,36 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import manufacturingImage from "@/assets/industry-manufacturing.jpg";
-import officeImage from "@/assets/industry-office.jpg";
-import warehouseImage from "@/assets/industry-warehouse.jpg";
-import healthcareImage from "@/assets/industry-healthcare.jpg";
+import { Home, Building2, Sun, MonitorPlay, ShoppingCart, Wind } from "lucide-react";
 
 const industries = [
   {
-    title: "Manufacturing Facilities",
-    description: "Keep production facilities clean and operational without disrupting workflow",
-    image: manufacturingImage,
+    title: "Villa",
+    description: "Transform your villa's exterior effortlessly with our cleaning drone.",
+    icon: Home,
   },
   {
-    title: "Commercial Office Buildings",
-    description: "Maintain professional appearance for corporate properties and business centers",
-    image: officeImage,
+    title: "Facade",
+    description: "Achieve spotless facades with ease using our cleaning drone.",
+    icon: Building2,
   },
   {
-    title: "Warehouses & Distribution",
-    description: "Large-scale facility cleaning with minimal downtime and maximum efficiency",
-    image: warehouseImage,
+    title: "Solar Panel",
+    description: "Maximize solar efficiency with a clean solar panel, thanks to our drone.",
+    icon: Sun,
   },
   {
-    title: "Healthcare Facilities",
-    description: "Safe, compliant cleaning for hospitals and medical centers",
-    image: healthcareImage,
+    title: "Advertising Board",
+    description: "Ensure your advertising board shines brightly with our cleaning drone.",
+    icon: MonitorPlay,
+  },
+  {
+    title: "Shopping Malls",
+    description: "Keep your supermarket exterior pristine with our powerful cleaning drone.",
+    icon: ShoppingCart,
+  },
+  {
+    title: "Wind Turbine",
+    description: "Maintain optimal wind turbine performance with our specialized cleaning drone.",
+    icon: Wind,
   },
 ];
 
@@ -40,22 +47,21 @@ const Industries = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {industries.map((industry) => (
-            <Card key={industry.title} className="overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary">
-              <div className="aspect-square overflow-hidden">
-                <img 
-                  src={industry.image} 
-                  alt={industry.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-lg mb-2">{industry.title}</CardTitle>
-                <CardDescription>{industry.description}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {industries.map((industry) => {
+            const Icon = industry.icon;
+            return (
+              <Card key={industry.title} className="overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary">
+                <CardHeader>
+                  <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <Icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg mb-2">{industry.title}</CardTitle>
+                  <CardDescription>{industry.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
