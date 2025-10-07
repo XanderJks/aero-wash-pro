@@ -53,8 +53,8 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@skywash.com" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  info@skywash.com
+                <a href="mailto:info@SkyWashPro.com" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  info@SkyWashPro.com
                 </a>
               </li>
               <li className="flex items-start gap-2">

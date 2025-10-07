@@ -100,7 +100,7 @@ const Privacy = () => {
                     <li><strong>Withdraw Consent:</strong> Withdraw previously given consent at any time</li>
                   </ul>
                   <p className="text-muted-foreground leading-relaxed mt-4">
-                    To exercise these rights, contact us at info@skywash.com.
+                    To exercise these rights, contact us at info@SkyWashPro.com.
                   </p>
                 </section>
 
@@ -151,7 +151,7 @@ const Privacy = () => {
                     <p><strong>SkyWashPro</strong></p>
                     <p>Compass Building, Al Hulaila</p>
                     <p>Ras Al Khaimah, UAE</p>
-                    <p>Email: info@skywash.com</p>
+                    <p>Email: info@SkyWashPro.com</p>
                     <p>Phone: +971 50 123 4567</p>
                   </div>
                 </section>

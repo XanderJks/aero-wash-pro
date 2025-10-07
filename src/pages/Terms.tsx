@@ -186,7 +186,7 @@ const Terms = () => {
                     <p><strong>SkyWashPro</strong></p>
                     <p>Compass Building, Al Hulaila</p>
                     <p>Ras Al Khaimah, UAE</p>
-                    <p>Email: info@skywash.com</p>
+                    <p>Email: info@SkyWashPro.com</p>
                     <p>Phone: +971 50 123 4567</p>
                   </div>
                 </section>
