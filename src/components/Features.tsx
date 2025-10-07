@@ -7,32 +7,32 @@ const features = [
   {
     icon: Shield,
     title: "Zero Risk",
-    description: "Nobody climbs. Nobody falls. Our drones do the dangerous work while your team stays safe.",
+    description: "Keep your crew on solid ground. The drone handles heights—you handle business.",
   },
   {
     icon: Zap,
     title: "Military-Grade Tech",
-    description: "Built with carbon fiber and precision sensors. This isn't a toy—it's professional equipment.",
+    description: "Carbon fiber frame, precision sensors. Built for wind, weather, and real work.",
   },
   {
     icon: DollarSign,
     title: "60% Cheaper",
-    description: "No scaffolding rentals. No insurance nightmares. Just fast, affordable cleaning.",
+    description: "Skip the scaffolding, skip the insurance drama. Clean more, spend less.",
   },
   {
     icon: Clock,
     title: "5x Faster",
-    description: "What takes a crew days, our drone finishes in hours. Get back to business faster.",
+    description: "Days of crew work done in hours. Less downtime, more uptime.",
   },
   {
     icon: Droplets,
     title: "3200 PSI Power",
-    description: "Professional pressure washing from the sky. Adjustable for any surface—glass, concrete, you name it.",
+    description: "Industrial-grade pressure from above. Dial it up for concrete, dial it down for glass.",
   },
   {
     icon: CheckCircle,
     title: "Water Smart",
-    description: "Uses 70% less water than traditional methods. Your building gets clean, the planet stays green.",
+    description: "70% less water per job. Good for the budget, better for the planet.",
   },
 ];
 
@@ -42,10 +42,10 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-white">
-            Clean Anything. <span className="text-accent">Anywhere High.</span>
+            High Places. <span className="text-accent">Zero Hassle.</span>
           </h2>
           <p className="text-lg text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Skyscrapers, solar farms, wind turbines—if it's high up and dirty, we clean it. No ladders, no lifts, no drama. Just a drone that flies up, blasts the grime, and gets the job done. We've cleaned everything from 50-story office towers to rural solar installations. Tell us what needs cleaning, we'll tell you when we can start.
+            Towers, turbines, solar arrays—if it's up there collecting dirt, we'll handle it. No crews dangling from ropes, no lift rentals eating your budget. Our drone flies to the problem and pressure-washes it clean. From downtown highrises to desert solar farms, we've done it all. Name the job, we'll quote it.
           </p>
         </div>
 
@@ -68,35 +68,35 @@ const Features = () => {
         <div className="bg-card rounded-2xl overflow-hidden shadow-elegant p-8 md:p-12">
           <div className="grid grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="font-heading text-3xl font-bold mb-4">The Beast That Cleans</h3>
-              <h4 className="text-xl font-semibold mb-6 text-muted-foreground">SkyWashPro S1 Specs</h4>
+              <h3 className="font-heading text-3xl font-bold mb-4">Built for Real Work</h3>
+              <h4 className="text-xl font-semibold mb-6 text-muted-foreground">SkyWashPro S1</h4>
               <p className="text-lg text-muted-foreground mb-6">
-                This isn't your neighbor's camera drone. Built tough for commercial work, tested on hundreds of buildings:
+                Industrial-grade drone, proven across hundreds of commercial sites:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Carbon fiber frame - survives crashes, wind, and weather</span>
+                  <span>Carbon fiber frame—handles crashes and harsh weather</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>3200 PSI pump - professional pressure with 100m reach</span>
+                  <span>3200 PSI pump with 100m range</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>15 km live video feed - see exactly what you're cleaning</span>
+                  <span>15 km live video—watch the clean happen</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Night vision - work after hours without disturbing tenants</span>
+                  <span>Night vision for after-hours operations</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>180° rotating nozzle - hits every angle perfectly</span>
+                  <span>180° rotating nozzle reaches any angle</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Hot-swap batteries - clean all day without downtime</span>
+                  <span>Hot-swap batteries—no downtime between jobs</span>
                 </li>
               </ul>
               <Button
@@ -108,7 +108,7 @@ const Features = () => {
                   if (element) element.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Talk to Us
+                Get a Quote
               </Button>
             </div>
             <div>
