@@ -38,8 +38,8 @@ const Contact = () => {
       
       // In a real application, this would send data to your backend
       toast({
-        title: "Quote Request Submitted",
-        description: "Thank you! We'll contact you within 24 hours to discuss your needs.",
+        title: "Demo Request Submitted",
+        description: "Thank you! Our sales team will contact you within 24 hours with pricing and demo options.",
       });
       
       // Reset form
@@ -87,17 +87,17 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              Let's <span className="text-accent">Talk</span>
+              Ready to <span className="text-accent">Buy</span>?
             </h2>
             <p className="text-xl text-muted-foreground">
-              Tell us what needs cleaning. We'll tell you exactly what it costs and when we can start.
+              Request a demo, get pricing, or talk to our sales team. We ship worldwide.
             </p>
           </div>
 
           <Card className="border-2">
             <CardHeader>
-              <CardTitle>Get Your Quote</CardTitle>
-              <CardDescription>Real humans reply within 24 hours. No sales pitch, just honest answers.</CardDescription>
+              <CardTitle>Request Product Demo & Pricing</CardTitle>
+              <CardDescription>Our sales team responds within 24 hours with pricing, specs, and demo scheduling.</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -160,25 +160,25 @@ const Contact = () => {
                       <SelectValue placeholder="Select your industry" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="commercial">Office Buildings</SelectItem>
-                      <SelectItem value="residential">Luxury Homes</SelectItem>
-                      <SelectItem value="solar">Solar Farms</SelectItem>
-                      <SelectItem value="wind">Wind Turbines</SelectItem>
-                      <SelectItem value="retail">Shopping Centers</SelectItem>
-                      <SelectItem value="advertising">Billboards & Signs</SelectItem>
-                      <SelectItem value="other">Something Else</SelectItem>
+                      <SelectItem value="cleaning-service">Building Cleaning Service</SelectItem>
+                      <SelectItem value="facility-management">Facility Management</SelectItem>
+                      <SelectItem value="solar-maintenance">Solar Farm Operator</SelectItem>
+                      <SelectItem value="wind-energy">Wind Energy Company</SelectItem>
+                      <SelectItem value="property-management">Property Management</SelectItem>
+                      <SelectItem value="entrepreneur">Entrepreneur/Startup</SelectItem>
+                      <SelectItem value="other">Other Industry</SelectItem>
                     </SelectContent>
                   </Select>
                   {errors.industry && <p className="text-sm text-destructive">{errors.industry}</p>}
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Tell us about your project *</Label>
+                  <Label htmlFor="message">Tell us about your business *</Label>
                   <Textarea
                     id="message"
                     value={formData.message}
                     onChange={(e) => handleChange("message", e.target.value)}
-                    placeholder="What needs cleaning? How high is it? When do you need it done?"
+                    placeholder="What type of cleaning business do you run? How many buildings do you service monthly? Are you starting new or expanding?"
                     rows={5}
                     className={errors.message ? "border-destructive" : ""}
                   />
@@ -186,7 +186,7 @@ const Contact = () => {
                 </div>
 
                 <Button type="submit" variant="hero" size="lg" className="w-full">
-                  Get My Quote
+                  Request Demo & Pricing
                 </Button>
               </form>
             </CardContent>
