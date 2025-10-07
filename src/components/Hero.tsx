@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="max-w-4xl">
 
           <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-primary-foreground leading-tight">
-            AltitudeWash Drone
+            SkyWashPro Drone
           </h1>
 
           <p className="text-base sm:text-lg md:text-2xl mb-6 md:mb-8 text-primary-foreground/90 max-w-2xl leading-relaxed">

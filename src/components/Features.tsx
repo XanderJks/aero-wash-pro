@@ -69,7 +69,7 @@ const Features = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h3 className="font-heading text-3xl font-bold mb-4">The Beast That Cleans</h3>
-              <h4 className="text-xl font-semibold mb-6 text-muted-foreground">AltitudeWash S1 Specs</h4>
+              <h4 className="text-xl font-semibold mb-6 text-muted-foreground">SkyWashPro S1 Specs</h4>
               <p className="text-lg text-muted-foreground mb-6">
                 This isn't your neighbor's camera drone. Built tough for commercial work, tested on hundreds of buildings:
               </p>
