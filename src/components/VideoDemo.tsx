@@ -9,15 +9,18 @@ const VideoDemo = () => {
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              See It <span className="text-accent">In Action</span>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-block mb-4 px-4 py-1.5 bg-accent/10 rounded-full">
+              <span className="text-accent font-semibold text-sm uppercase tracking-wide">Live Demo</span>
+            </div>
+            <h2 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-foreground">
+              Watch it Work
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Watch how our drone tackles a 20-story building in under 3 hours. No ropes, no lifts, no risk.
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              20-story building cleaned in 3 hours. Zero scaffolding. Zero risk. 100% results.
             </p>
           </div>
 
@@ -48,11 +51,14 @@ const VideoDemo = () => {
                   </div>
 
                   <div className="absolute bottom-8 left-8 right-8">
-                    <h3 className="text-white text-2xl font-bold mb-2">
-                      Full Building Cleaning Demo
+                    <div className="inline-block px-3 py-1 bg-accent/90 rounded-full mb-3">
+                      <span className="text-primary font-bold text-xs uppercase tracking-wider">Time-Lapse</span>
+                    </div>
+                    <h3 className="text-white text-2xl font-bold mb-1">
+                      Complete Building Transformation
                     </h3>
-                    <p className="text-white/90 text-lg">
-                      3 hours of work in 3 minutes
+                    <p className="text-white/80 text-base">
+                      Real job, real results
                     </p>
                   </div>
                 </div>
@@ -80,18 +86,27 @@ const VideoDemo = () => {
             )}
           </div>
 
-          <div className="grid grid-cols-3 gap-6 mt-12">
-            <div className="text-center p-6 rounded-xl bg-card border border-border">
-              <div className="text-4xl font-bold text-primary mb-2">3 Hours</div>
-              <p className="text-muted-foreground">Average cleaning time for 20-story building</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+              <div className="relative text-center p-8 rounded-2xl bg-card/80 backdrop-blur-sm border-2 border-accent/20 hover:border-accent/40 transition-all duration-300">
+                <div className="text-6xl font-bold bg-gradient-to-br from-accent to-accent/70 bg-clip-text text-transparent mb-3">3h</div>
+                <p className="text-foreground font-medium text-sm uppercase tracking-wide">Complete 20-Story Clean</p>
+              </div>
             </div>
-            <div className="text-center p-6 rounded-xl bg-card border border-border">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <p className="text-muted-foreground">Safety record - zero incidents</p>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+              <div className="relative text-center p-8 rounded-2xl bg-card/80 backdrop-blur-sm border-2 border-accent/20 hover:border-accent/40 transition-all duration-300">
+                <div className="text-6xl font-bold bg-gradient-to-br from-accent to-accent/70 bg-clip-text text-transparent mb-3">0</div>
+                <p className="text-foreground font-medium text-sm uppercase tracking-wide">Safety Incidents Ever</p>
+              </div>
             </div>
-            <div className="text-center p-6 rounded-xl bg-card border border-border">
-              <div className="text-4xl font-bold text-primary mb-2">60%</div>
-              <p className="text-muted-foreground">Cost savings vs traditional methods</p>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+              <div className="relative text-center p-8 rounded-2xl bg-card/80 backdrop-blur-sm border-2 border-accent/20 hover:border-accent/40 transition-all duration-300">
+                <div className="text-6xl font-bold bg-gradient-to-br from-accent to-accent/70 bg-clip-text text-transparent mb-3">60%</div>
+                <p className="text-foreground font-medium text-sm uppercase tracking-wide">Lower Than Traditional</p>
+              </div>
             </div>
           </div>
         </div>
