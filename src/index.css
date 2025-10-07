@@ -122,5 +122,46 @@ All colors MUST be HSL.
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .clip-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .clip-diagonal {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .transition-smooth {
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .transition-bounce {
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-500;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-2xl;
+  }
+
+  .industrial-border {
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(135deg, hsl(202 60% 55%), hsl(0 85% 55%)) 1;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   }
 }

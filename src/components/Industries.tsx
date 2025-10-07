@@ -58,23 +58,102 @@ const Industries = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-6">
-          {industries.map((industry) => (
-            <Card key={industry.title} className="overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary">
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={industry.image}
-                  alt={industry.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-lg mb-2">{industry.title}</CardTitle>
-                <CardDescription>{industry.description}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
+        <div className="grid grid-cols-12 gap-4 auto-rows-[280px]">
+          <Card className="col-span-5 row-span-2 overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary relative">
+            <div className="absolute inset-0 overflow-hidden">
+              <img
+                src={industries[0].image}
+                alt={industries[0].alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            </div>
+            <CardHeader className="relative z-10 h-full flex flex-col justify-end">
+              <CardTitle className="text-2xl mb-3 text-white">{industries[0].title}</CardTitle>
+              <CardDescription className="text-white/90 text-base">{industries[0].description}</CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="col-span-7 row-span-1 overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary relative">
+            <div className="absolute inset-0 overflow-hidden">
+              <img
+                src={industries[1].image}
+                alt={industries[1].alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
+            </div>
+            <CardHeader className="relative z-10 h-full flex flex-col justify-end">
+              <CardTitle className="text-xl mb-2 text-white">{industries[1].title}</CardTitle>
+              <CardDescription className="text-white/90">{industries[1].description}</CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="col-span-4 row-span-1 overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary relative">
+            <div className="absolute inset-0 overflow-hidden">
+              <img
+                src={industries[2].image}
+                alt={industries[2].alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            </div>
+            <CardHeader className="relative z-10 h-full flex flex-col justify-end">
+              <CardTitle className="text-lg mb-2 text-white">{industries[2].title}</CardTitle>
+              <CardDescription className="text-white/90 text-sm">{industries[2].description}</CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="col-span-3 row-span-1 overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary relative">
+            <div className="absolute inset-0 overflow-hidden">
+              <img
+                src={industries[3].image}
+                alt={industries[3].alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            </div>
+            <CardHeader className="relative z-10 h-full flex flex-col justify-end">
+              <CardTitle className="text-lg mb-2 text-white">{industries[3].title}</CardTitle>
+              <CardDescription className="text-white/90 text-sm">{industries[3].description}</CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="col-span-4 row-span-2 overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary relative">
+            <div className="absolute inset-0 overflow-hidden">
+              <img
+                src={industries[4].image}
+                alt={industries[4].alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+            </div>
+            <CardHeader className="relative z-10 h-full flex flex-col justify-end">
+              <CardTitle className="text-xl mb-3 text-white">{industries[4].title}</CardTitle>
+              <CardDescription className="text-white/90">{industries[4].description}</CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="col-span-8 row-span-2 overflow-hidden group hover:shadow-card transition-all duration-300 border-2 hover:border-primary relative">
+            <div className="absolute inset-0 overflow-hidden">
+              <img
+                src={industries[5].image}
+                alt={industries[5].alt}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent"></div>
+            </div>
+            <CardHeader className="relative z-10 h-full flex flex-col justify-end">
+              <CardTitle className="text-2xl mb-3 text-white">{industries[5].title}</CardTitle>
+              <CardDescription className="text-white/90 text-base">{industries[5].description}</CardDescription>
+            </CardHeader>
+          </Card>
         </div>
       </div>
     </section>

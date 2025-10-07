@@ -9,8 +9,9 @@ const VideoDemo = () => {
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-white relative">
+      <div className="absolute -bottom-16 left-0 w-full h-32 bg-primary transform -skew-y-2 z-0"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
