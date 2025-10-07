@@ -27,36 +27,28 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-20 bg-background">
+    <section id="testimonials" className="py-32 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Trusted by Industry Leaders
+        <div className="mb-20">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4 text-primary max-w-2xl">
+            What operators say
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See what our clients say about their experience with SkyWashPro
-          </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.name} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-card">
-              <CardHeader>
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-accent text-accent" />
-                  ))}
+        <div className="space-y-12 max-w-5xl">
+          {testimonials.map((testimonial, index) => (
+            <div key={testimonial.name} className="border-l-4 border-accent pl-12 py-8">
+              <p className="text-2xl text-gray-900 mb-8 leading-relaxed">
+                "{testimonial.content}"
+              </p>
+              <div className="flex items-center gap-4">
+                <div>
+                  <p className="font-bold text-primary text-lg">{testimonial.name}</p>
+                  <p className="text-gray-600">{testimonial.position}</p>
+                  <p className="text-gray-600">{testimonial.company}</p>
                 </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/90 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.position}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-                </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

@@ -10,37 +10,45 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-32 pb-16">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Professional drone performing high-altitude building exterior cleaning with pressure washing system"
-          className="w-full h-full object-cover"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/55 via-primary/25 to-transparent"></div>
-      </div>
+    <section id="hero" className="relative bg-white pt-24 pb-32">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[85vh]">
+          <div>
+            <div className="inline-block border-2 border-primary px-4 py-2 mb-8">
+              <span className="text-sm font-mono tracking-wider text-primary">SKYWASHPRO S1</span>
+            </div>
 
-      {/* Content */}
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="max-w-3xl">
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 text-primary leading-[0.95] tracking-tight">
+              Industrial<br/>cleaning<br/>drone
+            </h1>
 
-          <h1 className="font-heading text-7xl font-bold mb-6 text-primary-foreground leading-tight">
-            Own the Future of Building Maintenance
-          </h1>
+            <div className="space-y-4 mb-12 text-lg">
+              <p className="text-gray-700">
+                Pressure-wash buildings, solar panels, and turbines from ground level. No scaffolding. No crew risk. 60% cost reduction.
+              </p>
+            </div>
 
-          <p className="text-2xl mb-8 text-primary-foreground/90 max-w-2xl leading-relaxed">
-            The SkyWashPro S1 - Industrial cleaning drone that cuts your clients' costs by 60%. Buy once, profit forever.
-          </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button onClick={scrollToContact} className="bg-primary text-white px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
+                REQUEST DEMO
+              </button>
+              <button onClick={scrollToContact} className="border-2 border-primary text-primary px-8 py-4 font-semibold hover:bg-primary hover:text-white transition-colors">
+                GET PRICING
+              </button>
+            </div>
+          </div>
 
-          <div className="flex flex-row gap-4">
-            <Button onClick={scrollToContact} variant="hero" size="lg" className="w-auto">
-              Request Demo
-            </Button>
-            <Button onClick={scrollToContact} variant="outline" size="lg" className="w-auto bg-white/10 border-accent text-white hover:bg-accent hover:text-primary backdrop-blur-sm">
-              Get Price Quote
-            </Button>
+          <div className="relative">
+            <img
+              src={heroImage}
+              alt="SkyWashPro S1 industrial cleaning drone"
+              className="w-full"
+              loading="eager"
+            />
+            <div className="absolute bottom-8 left-8 bg-accent px-6 py-3">
+              <div className="text-primary font-bold text-2xl">3200 PSI</div>
+              <div className="text-primary text-sm">INDUSTRIAL POWER</div>
+            </div>
           </div>
         </div>
       </div>

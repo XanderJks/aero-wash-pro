@@ -33,52 +33,50 @@ const includedItems = [
 
 const AllIncluded = () => {
   return (
-    <section className="py-20 bg-primary">
+    <section className="py-32 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-white">
-            Everything <span className="text-accent">You Need</span>
+        <div className="mb-20">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4">
+            Complete system
           </h2>
+          <p className="text-xl text-gray-400">Everything shipped in one case</p>
         </div>
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mb-24">
           {includedItems.map((item) => (
-            <Card key={item.title} className="bg-card/95 backdrop-blur-sm overflow-hidden hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
+            <div key={item.title} className="bg-gray-800 overflow-hidden group cursor-pointer">
               <div className="aspect-square overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-3 text-foreground leading-tight">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                <h3 className="font-bold text-sm mb-2 tracking-wider text-accent">{item.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{item.description}</p>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
         {/* Support Section */}
-        <div className="mt-16 bg-card rounded-2xl p-8 md:p-12 shadow-elegant">
-          <h3 className="font-heading text-3xl font-bold mb-8 text-center">We've Got Your Back</h3>
-          <div className="grid grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-4xl mb-4">✓</div>
-              <h4 className="font-semibold text-lg mb-2">Training Included</h4>
-              <p className="text-muted-foreground">We teach your team how to fly and clean safely</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">✓</div>
-              <h4 className="font-semibold text-lg mb-2">24/7 Support</h4>
-              <p className="text-muted-foreground">Something breaks at 3 AM? We answer.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">✓</div>
-              <h4 className="font-semibold text-lg mb-2">3-Year Warranty</h4>
-              <p className="text-muted-foreground">Full coverage, lifetime maintenance available</p>
-            </div>
+        <div className="grid md:grid-cols-3 gap-12 border-t border-gray-700 pt-16">
+          <div>
+            <div className="text-6xl font-bold text-accent mb-4">01</div>
+            <h4 className="font-bold text-xl mb-3">Training Included</h4>
+            <p className="text-gray-400">Full operator training with every purchase. Remote or on-site.</p>
+          </div>
+          <div>
+            <div className="text-6xl font-bold text-accent mb-4">02</div>
+            <h4 className="font-bold text-xl mb-3">24/7 Support</h4>
+            <p className="text-gray-400">Direct line to our engineering team. Any time, any timezone.</p>
+          </div>
+          <div>
+            <div className="text-6xl font-bold text-accent mb-4">03</div>
+            <h4 className="font-bold text-xl mb-3">3-Year Warranty</h4>
+            <p className="text-gray-400">Full coverage. Extended maintenance plans available.</p>
           </div>
         </div>
       </div>

@@ -100,24 +100,34 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30">
+    <section id="contact" className="py-32 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">
-              Ready to <span className="text-accent">Buy</span>?
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Request a demo, get pricing, or talk to our sales team. We ship worldwide.
-            </p>
-          </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 mb-16">
+            <div>
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 text-primary">
+                Get pricing
+              </h2>
+              <p className="text-xl text-gray-700 mb-8">
+                Request a demo, specifications, and pricing. Our team responds within 24 hours.
+              </p>
+              <div className="space-y-6">
+                <div className="border-l-4 border-accent pl-6">
+                  <div className="font-bold text-primary mb-1">Response Time</div>
+                  <div className="text-gray-700">24 hours or less</div>
+                </div>
+                <div className="border-l-4 border-accent pl-6">
+                  <div className="font-bold text-primary mb-1">Shipping</div>
+                  <div className="text-gray-700">Worldwide delivery available</div>
+                </div>
+                <div className="border-l-4 border-accent pl-6">
+                  <div className="font-bold text-primary mb-1">Demo</div>
+                  <div className="text-gray-700">Remote or on-site demonstration</div>
+                </div>
+              </div>
+            </div>
 
-          <Card className="border-2">
-            <CardHeader>
-              <CardTitle>Request Product Demo & Pricing</CardTitle>
-              <CardDescription>Our sales team responds within 24 hours with pricing, specs, and demo scheduling.</CardDescription>
-            </CardHeader>
-            <CardContent>
+            <div className="bg-gray-50 p-8 border-2 border-gray-200">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -203,12 +213,12 @@ const Contact = () => {
                   {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
                 </div>
 
-                <Button type="submit" variant="hero" size="lg" className="w-full">
-                  Request Demo & Pricing
-                </Button>
+                <button type="submit" className="w-full bg-primary text-white px-8 py-4 font-semibold hover:bg-primary/90 transition-colors">
+                  SUBMIT REQUEST
+                </button>
               </form>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>
