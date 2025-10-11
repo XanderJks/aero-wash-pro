@@ -14,35 +14,35 @@ const VideoDemo = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">DEMONSTRATION</div>
+              <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">KLANTERVARING</div>
 
               <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-                System in Operation
+                Ontdek de Voordelen
               </h2>
 
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Real deployment footage from commercial high-rise cleaning operation. 20-story building completed in 3 hours.
+                Bekijk hoe onze drone cleaning oplossing werkt en waarom professionals kiezen voor SkyWashPro.
               </p>
 
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-1 h-1 bg-foreground rounded-full"></div>
-                  <span className="text-foreground">Ground-based operations eliminate height work</span>
+                  <span className="text-foreground">Veilig werken vanaf de grond</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-1 h-1 bg-foreground rounded-full"></div>
-                  <span className="text-foreground">No access equipment or permits required</span>
+                  <span className="text-foreground">Sneller en efficiënter dan traditionele methoden</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-1 h-1 bg-foreground rounded-full"></div>
-                  <span className="text-foreground">Building remains operational during cleaning</span>
+                  <span className="text-foreground">Kostenbesparing tot 60%</span>
                 </div>
               </div>
 
               <div className="bg-secondary border-l-2 border-foreground p-6 rounded-sm">
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">PROJECT ECONOMICS</p>
-                <p className="text-3xl font-bold text-foreground">$15,000 - $25,000</p>
-                <p className="text-sm text-muted-foreground mt-1">Average savings per 20-story building</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">KOSTENVOORDEEL</p>
+                <p className="text-3xl font-bold text-foreground">€15.000 - €25.000</p>
+                <p className="text-sm text-muted-foreground mt-1">Gemiddelde besparing per groot gebouw</p>
               </div>
             </div>
 
@@ -68,7 +68,7 @@ const VideoDemo = () => {
                       </div>
 
                       <div className="absolute top-4 left-4 bg-foreground text-background px-3 py-1 text-xs font-semibold uppercase tracking-wider">
-                        3 MIN
+                        REVIEW
                       </div>
                     </div>
                   </div>
@@ -97,16 +97,16 @@ const VideoDemo = () => {
 
               <div className="grid grid-cols-3 gap-4 mt-6">
                 <div className="text-center p-4 bg-secondary border border-border rounded-sm">
-                  <div className="text-2xl font-bold text-foreground">3h</div>
-                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Duration</div>
+                  <div className="text-2xl font-bold text-foreground">5x</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Sneller</div>
                 </div>
                 <div className="text-center p-4 bg-secondary border border-border rounded-sm">
-                  <div className="text-2xl font-bold text-foreground">0</div>
-                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Incidents</div>
+                  <div className="text-2xl font-bold text-foreground">100%</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Veilig</div>
                 </div>
                 <div className="text-center p-4 bg-secondary border border-border rounded-sm">
                   <div className="text-2xl font-bold text-foreground">60%</div>
-                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Savings</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Besparing</div>
                 </div>
               </div>
             </div>
