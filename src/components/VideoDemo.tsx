@@ -14,35 +14,35 @@ const VideoDemo = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">CUSTOMER EXPERIENCE</div>
+              <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">ABOUT SKYWASHPRO</div>
 
               <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-                Discover the Benefits
+                Innovation in Cleaning
               </h2>
 
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                See how our drone cleaning solution works and why professionals choose SkyWashPro.
+                Learn about our revolutionary drone cleaning technology and how we are transforming the industry.
               </p>
 
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-1 h-1 bg-foreground rounded-full"></div>
-                  <span className="text-foreground">Safe ground-based operations</span>
+                  <span className="text-foreground">Advanced autonomous cleaning technology</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-1 h-1 bg-foreground rounded-full"></div>
-                  <span className="text-foreground">Faster and more efficient than traditional methods</span>
+                  <span className="text-foreground">Proven results across multiple industries</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-1 h-1 bg-foreground rounded-full"></div>
-                  <span className="text-foreground">Up to 60% cost savings</span>
+                  <span className="text-foreground">Industry-leading safety standards</span>
                 </div>
               </div>
 
               <div className="bg-secondary border-l-2 border-foreground p-6 rounded-sm">
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">COST SAVINGS</p>
-                <p className="text-3xl font-bold text-foreground">$15,000 - $25,000</p>
-                <p className="text-sm text-muted-foreground mt-1">Average savings per large building</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">EFFICIENCY BOOST</p>
+                <p className="text-3xl font-bold text-foreground">60% Faster</p>
+                <p className="text-sm text-muted-foreground mt-1">Than traditional cleaning methods</p>
               </div>
             </div>
 
@@ -68,7 +68,7 @@ const VideoDemo = () => {
                       </div>
 
                       <div className="absolute top-4 left-4 bg-foreground text-background px-3 py-1 text-xs font-semibold uppercase tracking-wider">
-                        REVIEW
+                        WATCH VIDEO
                       </div>
                     </div>
                   </div>
@@ -97,16 +97,16 @@ const VideoDemo = () => {
 
               <div className="grid grid-cols-3 gap-4 mt-6">
                 <div className="text-center p-4 bg-secondary border border-border rounded-sm">
+                  <div className="text-2xl font-bold text-foreground">60%</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Cost Reduction</div>
+                </div>
+                <div className="text-center p-4 bg-secondary border border-border rounded-sm">
                   <div className="text-2xl font-bold text-foreground">5x</div>
                   <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Faster</div>
                 </div>
                 <div className="text-center p-4 bg-secondary border border-border rounded-sm">
                   <div className="text-2xl font-bold text-foreground">100%</div>
                   <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Safe</div>
-                </div>
-                <div className="text-center p-4 bg-secondary border border-border rounded-sm">
-                  <div className="text-2xl font-bold text-foreground">60%</div>
-                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Savings</div>
                 </div>
               </div>
             </div>
