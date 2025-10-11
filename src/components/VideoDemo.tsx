@@ -14,35 +14,35 @@ const VideoDemo = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">KLANTERVARING</div>
+              <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">CUSTOMER EXPERIENCE</div>
 
               <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-                Ontdek de Voordelen
+                Discover the Benefits
               </h2>
 
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Bekijk hoe onze drone cleaning oplossing werkt en waarom professionals kiezen voor SkyWashPro.
+                See how our drone cleaning solution works and why professionals choose SkyWashPro.
               </p>
 
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-1 h-1 bg-foreground rounded-full"></div>
-                  <span className="text-foreground">Veilig werken vanaf de grond</span>
+                  <span className="text-foreground">Safe ground-based operations</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-1 h-1 bg-foreground rounded-full"></div>
-                  <span className="text-foreground">Sneller en efficiënter dan traditionele methoden</span>
+                  <span className="text-foreground">Faster and more efficient than traditional methods</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <div className="w-1 h-1 bg-foreground rounded-full"></div>
-                  <span className="text-foreground">Kostenbesparing tot 60%</span>
+                  <span className="text-foreground">Up to 60% cost savings</span>
                 </div>
               </div>
 
               <div className="bg-secondary border-l-2 border-foreground p-6 rounded-sm">
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">KOSTENVOORDEEL</p>
-                <p className="text-3xl font-bold text-foreground">€15.000 - €25.000</p>
-                <p className="text-sm text-muted-foreground mt-1">Gemiddelde besparing per groot gebouw</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">COST SAVINGS</p>
+                <p className="text-3xl font-bold text-foreground">$15,000 - $25,000</p>
+                <p className="text-sm text-muted-foreground mt-1">Average savings per large building</p>
               </div>
             </div>
 
@@ -98,15 +98,15 @@ const VideoDemo = () => {
               <div className="grid grid-cols-3 gap-4 mt-6">
                 <div className="text-center p-4 bg-secondary border border-border rounded-sm">
                   <div className="text-2xl font-bold text-foreground">5x</div>
-                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Sneller</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Faster</div>
                 </div>
                 <div className="text-center p-4 bg-secondary border border-border rounded-sm">
                   <div className="text-2xl font-bold text-foreground">100%</div>
-                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Veilig</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Safe</div>
                 </div>
                 <div className="text-center p-4 bg-secondary border border-border rounded-sm">
                   <div className="text-2xl font-bold text-foreground">60%</div>
-                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Besparing</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">Savings</div>
                 </div>
               </div>
             </div>
