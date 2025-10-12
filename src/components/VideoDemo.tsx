@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 const VideoDemo = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const videoId = "xMtlbX4HL8k";
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  const videoId = "1126564149";
+  const thumbnailUrl = `https://vumbnail.com/${videoId}.jpg`;
 
   return (
     <section className="py-24 bg-background relative">
@@ -77,9 +77,9 @@ const VideoDemo = () => {
                     <div className="aspect-[4/3]">
                       <iframe
                         className="w-full h-full"
-                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+                        src={`https://player.vimeo.com/video/${videoId}?autoplay=1&title=0&byline=0&portrait=0`}
                         title="SkyWashPro Drone Cleaning Demo"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allow="autoplay; fullscreen; picture-in-picture"
                         allowFullScreen
                       ></iframe>
                     </div>
