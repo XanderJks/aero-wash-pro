@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    --primary: 220 15% 20%;
+    --primary: 0 84% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 10% 96%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 220 8% 94%;
     --muted-foreground: 220 10% 40%;
 
-    --accent: 220 15% 25%;
+    --accent: 0 84% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -40,8 +40,8 @@ All colors MUST be HSL.
 
     /* Industrial design tokens */
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 10% 98%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(220 15% 20%) 0%, hsl(220 12% 25%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(220 15% 25%) 0%, hsl(220 10% 30%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(0 84% 45%) 0%, hsl(0 74% 40%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(0 84% 45%) 0%, hsl(0 70% 35%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 8% 99%) 100%);
     --shadow-elegant: 0 20px 60px -15px hsl(220 15% 15% / 0.15);
     --shadow-card: 0 2px 8px -2px hsl(220 15% 15% / 0.08);
@@ -173,7 +173,7 @@ All colors MUST be HSL.
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, hsl(220 15% 20%), hsl(220 10% 35%));
+    background: linear-gradient(135deg, hsl(0 84% 45%), hsl(220 10% 35%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

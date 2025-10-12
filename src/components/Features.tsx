@@ -38,13 +38,17 @@ const features = [
 const Features = () => {
   return (
     <section id="features" className="py-32 bg-secondary relative overflow-hidden">
+      {/* Red accent bars */}
+      <div className="absolute top-20 right-0 w-1 h-48 bg-primary"></div>
+      <div className="absolute bottom-20 left-0 w-1 h-48 bg-primary"></div>
+      
       {/* Grid pattern background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:64px_64px] opacity-20"></div>
       
       <div className="container mx-auto px-6 md:px-12 relative">
         <div className="max-w-3xl mb-20">
-          <div className="inline-flex items-center gap-3 bg-foreground text-background px-6 py-3 mb-6">
-            <div className="w-2 h-2 bg-background"></div>
+          <div className="inline-flex items-center gap-3 bg-foreground text-background px-6 py-3 mb-6 border-l-4 border-primary">
+            <div className="w-2 h-2 bg-primary animate-pulse"></div>
             <span className="text-xs font-bold tracking-widest uppercase">Capabilities</span>
           </div>
           <h2 className="font-sans text-5xl md:text-6xl font-black leading-tight mb-6 uppercase tracking-tighter">
@@ -66,8 +70,11 @@ const Features = () => {
                 key={feature.title} 
                 className="group relative bg-background border-2 border-foreground overflow-hidden card-hover offset-shadow"
               >
-                <div className="p-8">
-                  <div className="w-16 h-16 border-2 border-foreground bg-foreground text-background flex items-center justify-center mb-6 group-hover:bg-background group-hover:text-foreground transition-all">
+                {/* Red accent corner */}
+                <div className="absolute top-0 right-0 w-16 h-16 bg-primary opacity-0 group-hover:opacity-100 transition-opacity clip-diagonal z-10"></div>
+                
+                <div className="p-8 relative">
+                  <div className="w-16 h-16 border-2 border-primary bg-foreground text-background flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                     <Icon className="h-8 w-8" strokeWidth={2.5} />
                   </div>
                   <h3 className="text-lg font-black mb-3 text-foreground uppercase tracking-tight">{feature.title}</h3>
@@ -75,8 +82,7 @@ const Features = () => {
                 </div>
                 
                 {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-foreground/30"></div>
-                <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-foreground/30"></div>
+                <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-primary/30"></div>
               </div>
             );
           })}
@@ -133,13 +139,14 @@ const Features = () => {
               </div>
 
               <button
-                className="bg-foreground text-background hover:bg-foreground/90 h-14 px-10 font-bold uppercase tracking-wider brutalist-border"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-10 font-bold uppercase tracking-wider brutalist-border relative overflow-hidden group"
                 onClick={() => {
                   const element = document.getElementById("contact");
                   if (element) element.scrollIntoView({ behavior: "smooth" });
                 }}
               >
-                Get Specs
+                <span className="relative z-10">Get Specs</span>
+                <div className="absolute inset-0 bg-foreground opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </button>
             </div>
             <div className="relative bg-muted">

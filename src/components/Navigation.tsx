@@ -19,10 +19,13 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b-4 border-foreground">
+      {/* Red accent stripe */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+      
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex justify-between items-center h-20">
           <button onClick={() => scrollToSection("hero")} className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 border-2 border-foreground flex items-center justify-center">
+            <div className="relative w-12 h-12 border-2 border-foreground flex items-center justify-center border-l-4 border-l-primary">
               <img src={droneLogo} alt="SkyWashPro Logo" className="w-10 h-10 grayscale" />
             </div>
             <span className="font-sans font-black text-xl text-foreground tracking-tighter uppercase">SkyWashPro</span>
@@ -51,9 +54,10 @@ const Navigation = () => {
             </div>
             <button 
               onClick={() => scrollToSection("contact")} 
-              className="ml-6 bg-foreground text-background hover:bg-foreground/90 h-12 px-8 font-bold uppercase tracking-wider brutalist-border"
+              className="ml-6 bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 font-bold uppercase tracking-wider brutalist-border relative overflow-hidden group"
             >
-              Contact
+              <span className="relative z-10">Contact</span>
+              <div className="absolute inset-0 bg-foreground opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </button>
           </div>
         </div>
