@@ -97,9 +97,6 @@ const Hero = () => {
                   loading="eager"
                 />
                 
-                {/* Red diagonal stripe overlay */}
-                <div className="absolute top-1/3 left-0 w-full h-2 bg-primary transform -rotate-12"></div>
-                
                 {/* Dark overlay */}
                 <div className="absolute inset-0 bg-foreground/20"></div>
               </div>
