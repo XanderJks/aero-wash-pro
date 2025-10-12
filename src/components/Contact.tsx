@@ -100,116 +100,136 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="max-w-4xl mx-auto">
+    <section id="contact" className="py-32 bg-gradient-card relative overflow-hidden">
+      {/* Diagonal stripes background */}
+      <div className="absolute inset-0 opacity-50">
+        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(135deg,transparent_25%,hsl(185_85%_42%_/_0.03)_25%,hsl(185_85%_42%_/_0.03)_50%,transparent_50%,transparent_75%,hsl(35_95%_55%_/_0.03)_75%)] bg-[length:60px_60px]"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 md:px-12 relative">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">CONTACT SALES</div>
-            <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
-              Request Information
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse-glow"></div>
+              <span className="text-xs font-semibold tracking-wider text-primary uppercase">Contact Sales</span>
+            </div>
+            <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              <span className="gradient-text">Request Information</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Schedule product demonstration and receive detailed technical specifications and pricing.
             </p>
           </div>
 
-          <Card className="border border-border rounded-sm">
-            <CardHeader className="pb-8">
-              <CardTitle className="text-2xl font-bold">Product Inquiry Form</CardTitle>
-              <CardDescription className="text-base">Sales team response within 24 hours for technical specifications and pricing information.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Full Name *</Label>
-                    <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) => handleChange("name", e.target.value)}
-                      placeholder="John Smith"
-                      className={errors.name ? "border-destructive" : "border-border"}
-                    />
-                    {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => handleChange("email", e.target.value)}
-                      placeholder="john@company.com"
-                      className={errors.email ? "border-destructive" : "border-border"}
-                    />
-                    {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company Name *</Label>
-                    <Input
-                      id="company"
-                      value={formData.company}
-                      onChange={(e) => handleChange("company", e.target.value)}
-                      placeholder="Your Company Inc."
-                      className={errors.company ? "border-destructive" : "border-border"}
-                    />
-                    {errors.company && <p className="text-sm text-destructive">{errors.company}</p>}
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number *</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => handleChange("phone", e.target.value)}
-                      placeholder="+1 (234) 567-890"
-                      className={errors.phone ? "border-destructive" : "border-border"}
-                    />
-                    {errors.phone && <p className="text-sm text-destructive">{errors.phone}</p>}
-                  </div>
+          <div className="bg-background rounded-3xl border border-primary/10 overflow-hidden shadow-elegant">
+            <div className="relative p-12">
+              {/* Decorative corner gradients */}
+              <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-primary opacity-10 blur-2xl rounded-full"></div>
+              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-accent opacity-10 blur-2xl rounded-full"></div>
+              
+              <div className="relative">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Product Inquiry Form</h3>
+                  <p className="text-base text-muted-foreground">Sales team response within 24 hours for technical specifications and pricing information.</p>
                 </div>
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Full Name *</Label>
+                      <Input
+                        id="name"
+                        value={formData.name}
+                        onChange={(e) => handleChange("name", e.target.value)}
+                        placeholder="John Smith"
+                        className={errors.name ? "border-destructive" : "border-border"}
+                      />
+                      {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
+                    </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="industry">Industry *</Label>
-                  <Select value={formData.industry} onValueChange={(value) => handleChange("industry", value)}>
-                    <SelectTrigger className={errors.industry ? "border-destructive" : "border-border"}>
-                      <SelectValue placeholder="Select industry" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="cleaning-service">Building Cleaning Service</SelectItem>
-                      <SelectItem value="facility-management">Facility Management</SelectItem>
-                      <SelectItem value="solar-maintenance">Solar Farm Operator</SelectItem>
-                      <SelectItem value="wind-energy">Wind Energy Company</SelectItem>
-                      <SelectItem value="property-management">Property Management</SelectItem>
-                      <SelectItem value="entrepreneur">Entrepreneur/Startup</SelectItem>
-                      <SelectItem value="other">Other Industry</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  {errors.industry && <p className="text-sm text-destructive">{errors.industry}</p>}
-                </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email Address *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                        placeholder="john@company.com"
+                        className={errors.email ? "border-destructive" : "border-border"}
+                      />
+                      {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
+                    </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Tell us about your business *</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => handleChange("message", e.target.value)}
-                    placeholder="What type of cleaning business do you run? How many buildings do you service monthly? Are you starting new or expanding?"
-                    rows={5}
-                    className={errors.message ? "border-destructive" : "border-border"}
-                  />
-                  {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
-                </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="company">Company Name *</Label>
+                      <Input
+                        id="company"
+                        value={formData.company}
+                        onChange={(e) => handleChange("company", e.target.value)}
+                        placeholder="Your Company Inc."
+                        className={errors.company ? "border-destructive" : "border-border"}
+                      />
+                      {errors.company && <p className="text-sm text-destructive">{errors.company}</p>}
+                    </div>
 
-                <Button type="submit" size="lg" className="w-full bg-foreground text-background hover:bg-foreground/90 h-12">
-                  Submit Inquiry
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+                    <div className="space-y-2">
+                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => handleChange("phone", e.target.value)}
+                        placeholder="+1 (234) 567-890"
+                        className={errors.phone ? "border-destructive" : "border-border"}
+                      />
+                      {errors.phone && <p className="text-sm text-destructive">{errors.phone}</p>}
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="industry">Industry *</Label>
+                    <Select value={formData.industry} onValueChange={(value) => handleChange("industry", value)}>
+                      <SelectTrigger className={errors.industry ? "border-destructive" : "border-border"}>
+                        <SelectValue placeholder="Select industry" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="cleaning-service">Building Cleaning Service</SelectItem>
+                        <SelectItem value="facility-management">Facility Management</SelectItem>
+                        <SelectItem value="solar-maintenance">Solar Farm Operator</SelectItem>
+                        <SelectItem value="wind-energy">Wind Energy Company</SelectItem>
+                        <SelectItem value="property-management">Property Management</SelectItem>
+                        <SelectItem value="entrepreneur">Entrepreneur/Startup</SelectItem>
+                        <SelectItem value="other">Other Industry</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    {errors.industry && <p className="text-sm text-destructive">{errors.industry}</p>}
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Tell us about your business *</Label>
+                    <Textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={(e) => handleChange("message", e.target.value)}
+                      placeholder="What type of cleaning business do you run? How many buildings do you service monthly? Are you starting new or expanding?"
+                      rows={5}
+                      className={errors.message ? "border-destructive" : "border-border"}
+                    />
+                    {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
+                  </div>
+
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full bg-gradient-primary text-primary-foreground hover:shadow-glow h-14 text-base font-medium group"
+                  >
+                    Submit Inquiry
+                    <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
+                  </Button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

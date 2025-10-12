@@ -37,9 +37,12 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 bg-gradient-card relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+    <section id="features" className="py-32 bg-gradient-card relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-primary/5 rounded-full"></div>
+      
       <div className="container mx-auto px-6 md:px-12 relative">
         <div className="max-w-3xl mb-20">
           <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">CAPABILITIES</div>
@@ -51,20 +54,33 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+        {/* Bento Grid Layout */}
+        <div className="grid md:grid-cols-3 gap-6 mb-24">
           {features.map((feature, index) => {
             const Icon = feature.icon;
+            const isLarge = index === 0 || index === 3;
+            
             return (
               <div 
                 key={feature.title} 
-                className="group bg-background p-8 rounded-2xl border border-border hover:border-primary/30 card-hover shadow-card"
+                className={`group relative bg-background rounded-3xl border border-primary/10 hover:border-primary/30 card-hover shadow-card overflow-hidden ${
+                  isLarge ? 'md:col-span-2 md:row-span-1' : 'md:col-span-1'
+                }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 group-hover:shadow-glow transition-all">
-                  <Icon className="h-7 w-7 text-primary-foreground" strokeWidth={2} />
+                {/* Gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div className="relative p-8">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 group-hover:shadow-glow transition-all group-hover:scale-110 duration-300">
+                    <Icon className="h-8 w-8 text-primary-foreground" strokeWidth={2} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
                 </div>
-                <h3 className="text-lg font-semibold mb-3 text-foreground">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                
+                {/* Decorative corner */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-primary opacity-5 blur-2xl rounded-full -translate-y-1/2 translate-x-1/2"></div>
               </div>
             );
           })}

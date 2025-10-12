@@ -11,10 +11,13 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative bg-gradient-hero overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_hsl(185_85%_42%_/_0.08),_transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_hsl(35_95%_55%_/_0.06),_transparent_50%)]"></div>
+      {/* Animated background elements */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-primary opacity-10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-accent opacity-10 rounded-full blur-3xl" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,_hsl(185_85%_42%_/_0.05),_transparent_40%)]"></div>
+      
       <div className="container mx-auto px-6 md:px-12 relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-32">
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-20 items-center min-h-screen py-32">
           {/* Left Content */}
           <div className="space-y-8 animate-fade-up">
             <div className="inline-block">
@@ -55,36 +58,67 @@ const Hero = () => {
             </div>
 
             {/* Key Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
-              <div>
-                <div className="text-3xl font-bold text-foreground">60%</div>
-                <div className="text-sm text-muted-foreground mt-1">Cost Reduction</div>
+            <div className="grid grid-cols-3 gap-6 pt-12">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity"></div>
+                <div className="relative p-6 border-l-4 border-primary">
+                  <div className="text-4xl font-bold gradient-text">60%</div>
+                  <div className="text-xs text-muted-foreground mt-2 uppercase tracking-wider">Cost Reduction</div>
+                </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-foreground">5x</div>
-                <div className="text-sm text-muted-foreground mt-1">Faster Operations</div>
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity"></div>
+                <div className="relative p-6 border-l-4 border-primary">
+                  <div className="text-4xl font-bold gradient-text">5x</div>
+                  <div className="text-xs text-muted-foreground mt-2 uppercase tracking-wider">Faster Operations</div>
+                </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-foreground">0</div>
-                <div className="text-sm text-muted-foreground mt-1">Safety Incidents</div>
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity"></div>
+                <div className="relative p-6 border-l-4 border-primary">
+                  <div className="text-4xl font-bold gradient-text">0</div>
+                  <div className="text-xs text-muted-foreground mt-2 uppercase tracking-wider">Safety Incidents</div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-primary opacity-20 blur-3xl rounded-full"></div>
-            <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-elegant border border-primary/10 animate-float">
-              <img
-                src={heroImage}
-                alt="Professional drone performing high-altitude building exterior cleaning with pressure washing system"
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-            </div>
-            <div className="absolute -bottom-6 -right-6 bg-gradient-accent text-accent-foreground px-8 py-5 rounded-2xl shadow-glow backdrop-blur-sm border border-accent/20">
-              <div className="text-lg font-bold">3200 PSI</div>
-              <div className="text-xs font-medium opacity-90">Pressure Power</div>
+          <div className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:w-[45%]">
+            {/* Glow effects */}
+            <div className="absolute -inset-8 bg-gradient-primary opacity-20 blur-3xl rounded-full animate-pulse-glow"></div>
+            <div className="absolute -top-12 -right-12 w-72 h-72 bg-gradient-accent opacity-30 blur-2xl rounded-full"></div>
+            
+            <div className="relative">
+              {/* Decorative frame */}
+              <div className="absolute -inset-3 bg-gradient-to-br from-primary via-transparent to-accent opacity-20 rounded-3xl"></div>
+              
+              <div className="aspect-[3/4] relative rounded-3xl overflow-hidden shadow-elegant border-4 border-background animate-float">
+                <img
+                  src={heroImage}
+                  alt="Professional drone performing high-altitude building exterior cleaning with pressure washing system"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+                
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-transparent"></div>
+              </div>
+              
+              {/* Floating badge */}
+              <div className="absolute -bottom-8 -left-8 bg-gradient-accent text-accent-foreground px-10 py-6 rounded-2xl shadow-glow backdrop-blur-sm border border-accent/20">
+                <div className="text-2xl font-bold">3200 PSI</div>
+                <div className="text-sm font-medium opacity-90">Pressure Power</div>
+              </div>
+              
+              {/* Decorative dot pattern */}
+              <div className="absolute -top-6 -left-6 w-24 h-24 opacity-30">
+                <div className="grid grid-cols-4 gap-2">
+                  {Array.from({ length: 16 }).map((_, i) => (
+                    <div key={i} className="w-2 h-2 rounded-full bg-primary"></div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
