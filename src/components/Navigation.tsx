@@ -18,49 +18,43 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 pointer-events-none"></div>
-      
-      <div className="container mx-auto px-6 md:px-12 relative">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b-4 border-foreground">
+      <div className="container mx-auto px-6 md:px-12">
         <div className="flex justify-between items-center h-20">
           <button onClick={() => scrollToSection("hero")} className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-primary rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-              <img src={droneLogo} alt="SkyWashPro Logo" className="h-12 w-12 relative rounded-full border-2 border-primary/20" />
+            <div className="relative w-12 h-12 border-2 border-foreground flex items-center justify-center">
+              <img src={droneLogo} alt="SkyWashPro Logo" className="w-10 h-10 grayscale" />
             </div>
-            <span className="font-sans font-bold text-xl gradient-text tracking-tight">SkyWashPro</span>
+            <span className="font-sans font-black text-xl text-foreground tracking-tighter uppercase">SkyWashPro</span>
           </button>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-2">
             <button 
               onClick={() => scrollToSection("industries")} 
-              className="relative text-sm text-foreground hover:text-primary transition-colors px-5 py-2.5 group"
+              className="text-sm font-bold text-foreground hover:bg-foreground hover:text-background transition-colors px-6 py-3 uppercase tracking-wider"
             >
-              <span className="relative z-10">Applications</span>
-              <div className="absolute inset-0 bg-primary/5 rounded-lg scale-0 group-hover:scale-100 transition-transform"></div>
+              Applications
             </button>
-            <Link to="/about" className="relative text-sm text-foreground hover:text-primary transition-colors px-5 py-2.5 group">
-              <span className="relative z-10">About</span>
-              <div className="absolute inset-0 bg-primary/5 rounded-lg scale-0 group-hover:scale-100 transition-transform"></div>
+            <Link to="/about" className="text-sm font-bold text-foreground hover:bg-foreground hover:text-background transition-colors px-6 py-3 uppercase tracking-wider">
+              About
             </Link>
-            <Link to="/faq" className="relative text-sm text-foreground hover:text-primary transition-colors px-5 py-2.5 group">
-              <span className="relative z-10">FAQ</span>
-              <div className="absolute inset-0 bg-primary/5 rounded-lg scale-0 group-hover:scale-100 transition-transform"></div>
+            <Link to="/faq" className="text-sm font-bold text-foreground hover:bg-foreground hover:text-background transition-colors px-6 py-3 uppercase tracking-wider">
+              FAQ
             </Link>
-            <div className="ml-4 flex items-center gap-3 pl-4">
-              <a href="mailto:info@SkyWashPro.com" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+            <div className="ml-4 flex items-center gap-3 pl-4 border-l-2 border-foreground">
+              <a href="mailto:info@SkyWashPro.com" className="w-10 h-10 border-2 border-foreground hover:bg-foreground hover:text-background flex items-center justify-center text-foreground transition-colors">
                 <Mail className="h-4 w-4" />
               </a>
-              <a href="tel:+31638104765" className="w-9 h-9 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+              <a href="tel:+31638104765" className="w-10 h-10 border-2 border-foreground hover:bg-foreground hover:text-background flex items-center justify-center text-foreground transition-colors">
                 <Phone className="h-4 w-4" />
               </a>
             </div>
-            <Button 
+            <button 
               onClick={() => scrollToSection("contact")} 
-              className="ml-6 bg-gradient-primary text-primary-foreground hover:shadow-glow h-11 px-6 font-medium"
+              className="ml-6 bg-foreground text-background hover:bg-foreground/90 h-12 px-8 font-bold uppercase tracking-wider brutalist-border"
             >
-              Contact Sales
-            </Button>
+              Contact
+            </button>
           </div>
         </div>
       </div>
