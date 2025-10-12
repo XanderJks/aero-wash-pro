@@ -46,23 +46,28 @@ const industries = [
 
 const Industries = () => {
   return (
-    <section id="industries" className="py-32 bg-gradient-hero relative overflow-hidden">
-      {/* Animated mesh gradient */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl" style={{ animationDelay: '3s' }}></div>
+    <section id="industries" className="py-32 bg-muted relative overflow-hidden">
+      {/* Industrial grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(to right, hsl(var(--foreground)) 1px, transparent 1px),
+            linear-gradient(to bottom, hsl(var(--foreground)) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }}></div>
       </div>
       
       <div className="container mx-auto px-6 md:px-12 relative">
         <div className="max-w-3xl mb-20">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse-glow"></div>
-            <span className="text-xs font-semibold tracking-wider text-primary uppercase">Applications</span>
+          <div className="inline-flex items-center gap-3 bg-foreground text-background px-6 py-3 mb-8 border-l-4 border-primary">
+            <div className="w-2 h-2 bg-primary"></div>
+            <span className="text-xs font-bold tracking-[0.2em] uppercase">Applications</span>
           </div>
-          <h2 className="font-sans text-4xl md:text-5xl font-bold leading-tight mb-6">
-            <span className="gradient-text">Commercial Cleaning Solutions</span>
+          <h2 className="font-sans text-5xl md:text-6xl font-black leading-[0.9] mb-6 uppercase tracking-tight">
+            Commercial<br/>Cleaning Solutions
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed font-mono">
             Deployed across multiple industries for professional cleaning operations requiring precision, safety, and efficiency.
           </p>
         </div>
@@ -82,28 +87,29 @@ const Industries = () => {
             return (
               <div 
                 key={industry.title} 
-                className={`group relative overflow-hidden bg-card rounded-3xl border border-primary/10 hover:border-primary/30 card-hover shadow-card ${sizes[index]}`}
+                className={`group relative overflow-hidden bg-card brutalist-border hover:border-foreground transition-all duration-300 offset-shadow ${sizes[index]}`}
               >
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
                     src={industry.image}
                     alt={industry.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                     loading="lazy"
                   />
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/40 to-transparent"></div>
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-foreground/60"></div>
                   
                   {/* Content overlay */}
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                      <h3 className="text-2xl font-bold mb-2 text-white">{industry.title}</h3>
-                      <p className="text-sm text-white/90 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">{industry.description}</p>
+                    <div className="transform translate-y-0 transition-transform">
+                      <div className="w-12 h-1 bg-primary mb-4"></div>
+                      <h3 className="text-2xl font-black mb-2 text-background uppercase tracking-tight">{industry.title}</h3>
+                      <p className="text-xs text-background/90 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono">{industry.description}</p>
                     </div>
                   </div>
                   
                   {/* Corner accent */}
-                  <div className="absolute top-4 right-4 w-12 h-12 border-t-2 border-r-2 border-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
               </div>
             );

@@ -7,31 +7,31 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-foreground text-background border-t-4 border-primary">
       <div className="container mx-auto px-6 md:px-12 py-16">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
-            <h3 className="font-sans font-bold text-xl mb-4 tracking-tight">SkyWashPro</h3>
-            <p className="text-background/70 text-sm leading-relaxed">
+            <h3 className="font-sans font-black text-2xl mb-4 tracking-tight uppercase">SkyWashPro</h3>
+            <p className="text-background/70 text-xs leading-relaxed font-mono">
               Professional drone cleaning systems for commercial operations. Engineered for precision, reliability, and safety.
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold text-sm mb-4 uppercase tracking-wider">Company</h4>
+            <h4 className="font-black text-xs mb-4 uppercase tracking-[0.2em]">Company</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-background/70 hover:text-background transition-colors text-sm">
+                <Link to="/about" className="text-background/70 hover:text-background transition-colors text-xs font-mono">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-background/70 hover:text-background transition-colors text-sm">
+                <Link to="/faq" className="text-background/70 hover:text-background transition-colors text-xs font-mono">
                   FAQ
                 </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection("contact")} className="text-background/70 hover:text-background transition-colors text-sm">
+                <button onClick={() => scrollToSection("contact")} className="text-background/70 hover:text-background transition-colors text-xs font-mono">
                   Contact
                 </button>
               </li>
@@ -39,8 +39,8 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-sm mb-4 uppercase tracking-wider">Product</h4>
-            <ul className="space-y-2 text-background/70 text-sm">
+            <h4 className="font-black text-xs mb-4 uppercase tracking-[0.2em]">Product</h4>
+            <ul className="space-y-2 text-background/70 text-xs font-mono">
               <li>SkyWashPro S1</li>
               <li>Training Program</li>
               <li>Technical Support</li>
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-sm mb-4 uppercase tracking-wider">Contact</h4>
+            <h4 className="font-black text-xs mb-4 uppercase tracking-[0.2em]">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />

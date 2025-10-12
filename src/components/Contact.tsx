@@ -100,37 +100,39 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 bg-gradient-card relative overflow-hidden">
-      {/* Diagonal stripes background */}
-      <div className="absolute inset-0 opacity-50">
-        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(135deg,transparent_25%,hsl(185_85%_42%_/_0.03)_25%,hsl(185_85%_42%_/_0.03)_50%,transparent_50%,transparent_75%,hsl(35_95%_55%_/_0.03)_75%)] bg-[length:60px_60px]"></div>
+    <section id="contact" className="py-32 bg-background relative overflow-hidden">
+      {/* Industrial grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(to right, hsl(var(--foreground)) 1px, transparent 1px),
+            linear-gradient(to bottom, hsl(var(--foreground)) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }}></div>
       </div>
       
       <div className="container mx-auto px-6 md:px-12 relative">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse-glow"></div>
-              <span className="text-xs font-semibold tracking-wider text-primary uppercase">Contact Sales</span>
+          <div className="mb-16">
+            <div className="inline-flex items-center gap-3 bg-foreground text-background px-6 py-3 mb-8 border-l-4 border-primary">
+              <div className="w-2 h-2 bg-primary"></div>
+              <span className="text-xs font-bold tracking-[0.2em] uppercase">Contact Sales</span>
             </div>
-            <h2 className="font-sans text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              <span className="gradient-text">Request Information</span>
+            <h2 className="font-sans text-5xl md:text-6xl font-black leading-[0.9] mb-6 uppercase tracking-tight">
+              Request<br/>Information
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl font-mono">
               Schedule product demonstration and receive detailed technical specifications and pricing.
             </p>
           </div>
 
-          <div className="bg-background rounded-3xl border border-primary/10 overflow-hidden shadow-elegant">
-            <div className="relative p-12">
-              {/* Decorative corner gradients */}
-              <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-primary opacity-10 blur-2xl rounded-full"></div>
-              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-accent opacity-10 blur-2xl rounded-full"></div>
-              
+          <div className="bg-card brutalist-border overflow-hidden offset-shadow">
+            <div className="relative p-12 border-l-4 border-primary">
               <div className="relative">
                 <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Product Inquiry Form</h3>
-                  <p className="text-base text-muted-foreground">Sales team response within 24 hours for technical specifications and pricing information.</p>
+                  <h3 className="text-2xl font-black text-foreground mb-2 uppercase tracking-tight">Product Inquiry Form</h3>
+                  <p className="text-sm text-muted-foreground font-mono">Sales team response within 24 hours for technical specifications and pricing information.</p>
                 </div>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -221,7 +223,7 @@ const Contact = () => {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    className="w-full bg-gradient-primary text-primary-foreground hover:shadow-glow h-14 text-base font-medium group"
+                    className="w-full bg-foreground text-background hover:bg-foreground/90 h-14 text-base font-black uppercase tracking-wider brutalist-border group"
                   >
                     Submit Inquiry
                     <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>

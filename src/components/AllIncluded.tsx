@@ -33,19 +33,27 @@ const includedItems = [
 const AllIncluded = () => {
   return (
     <section className="py-32 bg-background relative overflow-hidden">
-      {/* Diagonal background stripe */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 transform -skew-y-3"></div>
+      {/* Industrial grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(to right, hsl(var(--foreground)) 1px, transparent 1px),
+            linear-gradient(to bottom, hsl(var(--foreground)) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
       
       <div className="container mx-auto px-6 md:px-12 relative">
         <div className="max-w-3xl mb-20">
-          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse-glow"></div>
-            <span className="text-xs font-semibold tracking-wider text-primary uppercase">Complete System</span>
+          <div className="inline-flex items-center gap-3 bg-foreground text-background px-6 py-3 mb-8 border-l-4 border-primary">
+            <div className="w-2 h-2 bg-primary"></div>
+            <span className="text-xs font-bold tracking-[0.2em] uppercase">Complete System</span>
           </div>
-          <h2 className="font-sans text-4xl md:text-5xl font-bold leading-tight mb-6">
-            <span className="gradient-text">Everything Included</span>
+          <h2 className="font-sans text-5xl md:text-6xl font-black leading-[0.9] mb-6 uppercase tracking-tight">
+            Everything<br/>Included
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed font-mono">
             Full operational package ready for immediate deployment. No additional equipment required.
           </p>
         </div>
@@ -55,7 +63,7 @@ const AllIncluded = () => {
           {includedItems.map((item, index) => (
             <div 
               key={item.title} 
-              className={`group bg-card rounded-3xl border border-primary/10 overflow-hidden hover:border-primary/30 card-hover shadow-card ${
+              className={`group bg-card brutalist-border overflow-hidden hover:border-foreground transition-all duration-300 offset-shadow ${
                 index === 0 ? 'md:col-span-2 md:row-span-2' : ''
               }`}
             >
@@ -63,42 +71,37 @@ const AllIncluded = () => {
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-foreground/10"></div>
               </div>
-              <div className="p-6 relative">
-                <div className="absolute top-0 left-6 w-12 h-1 bg-gradient-primary -translate-y-1/2"></div>
-                <h3 className="text-lg font-bold mb-2 text-foreground">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              <div className="p-6 relative bg-background">
+                <div className="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+                <h3 className="text-lg font-bold mb-2 text-foreground uppercase tracking-tight pl-4">{item.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed font-mono pl-4">{item.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Support section with diagonal design */}
-        <div className="relative bg-gradient-card rounded-3xl border border-primary/10 overflow-hidden shadow-elegant">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-primary opacity-5 blur-3xl"></div>
-          
-          <div className="grid md:grid-cols-3 gap-12 p-12 relative">
-            <div className="relative">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mb-6 shadow-glow">1</div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Professional Training</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">Comprehensive operator certification program included with purchase</p>
-              <div className="absolute -bottom-6 left-0 w-full h-px bg-gradient-to-r from-primary via-accent to-transparent"></div>
+        {/* Support section */}
+        <div className="relative bg-foreground text-background brutalist-border overflow-hidden">
+          <div className="grid md:grid-cols-3 gap-0 relative">
+            <div className="relative p-8 border-r border-background/20">
+              <div className="w-16 h-16 bg-primary text-foreground flex items-center justify-center text-2xl font-black mb-6">01</div>
+              <h3 className="text-xl font-bold mb-3 uppercase tracking-tight">Professional Training</h3>
+              <p className="text-sm text-background/70 leading-relaxed font-mono">Comprehensive operator certification program included with purchase</p>
             </div>
-            <div className="relative">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mb-6 shadow-glow">2</div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">24/7 Technical Support</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">Direct engineering team access for operational assistance</p>
-              <div className="absolute -bottom-6 left-0 w-full h-px bg-gradient-to-r from-primary via-accent to-transparent"></div>
+            <div className="relative p-8 border-r border-background/20">
+              <div className="w-16 h-16 bg-primary text-foreground flex items-center justify-center text-2xl font-black mb-6">02</div>
+              <h3 className="text-xl font-bold mb-3 uppercase tracking-tight">24/7 Technical Support</h3>
+              <p className="text-sm text-background/70 leading-relaxed font-mono">Direct engineering team access for operational assistance</p>
             </div>
-            <div className="relative">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mb-6 shadow-glow">3</div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">3-Year Warranty</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">Comprehensive coverage with lifetime maintenance options</p>
-              <div className="absolute -bottom-6 left-0 w-full h-px bg-gradient-to-r from-primary via-accent to-transparent"></div>
+            <div className="relative p-8">
+              <div className="w-16 h-16 bg-primary text-foreground flex items-center justify-center text-2xl font-black mb-6">03</div>
+              <h3 className="text-xl font-bold mb-3 uppercase tracking-tight">3-Year Warranty</h3>
+              <p className="text-sm text-background/70 leading-relaxed font-mono">Comprehensive coverage with lifetime maintenance options</p>
             </div>
           </div>
         </div>
