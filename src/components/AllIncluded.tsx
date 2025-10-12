@@ -71,7 +71,7 @@ const AllIncluded = () => {
                 <img
                   src={item.image}
                   alt={item.alt}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-foreground/10"></div>

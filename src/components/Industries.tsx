@@ -72,28 +72,19 @@ const Industries = () => {
           </p>
         </div>
 
-        {/* Masonry-style grid with varying sizes */}
-        <div className="grid md:grid-cols-6 gap-6">
+        {/* Grid layout voor betere mobile weergave */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {industries.map((industry, index) => {
-            const sizes = [
-              'md:col-span-4 md:row-span-2', // 0: large
-              'md:col-span-2 md:row-span-1', // 1: small
-              'md:col-span-2 md:row-span-1', // 2: small
-              'md:col-span-2 md:row-span-2', // 3: tall
-              'md:col-span-2 md:row-span-1', // 4: small
-              'md:col-span-4 md:row-span-1', // 5: wide
-            ];
-            
             return (
               <div 
                 key={industry.title} 
-                className={`group relative overflow-hidden bg-card brutalist-border hover:border-foreground transition-all duration-300 offset-shadow ${sizes[index]}`}
+                className="group relative overflow-hidden bg-card brutalist-border hover:border-primary transition-all duration-300 offset-shadow"
               >
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
                     src={industry.image}
                     alt={industry.alt}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                     loading="lazy"
                   />
                   {/* Overlay */}

@@ -93,7 +93,7 @@ const Hero = () => {
                 <img
                   src={heroImage}
                   alt="Professional drone performing high-altitude building exterior cleaning with pressure washing system"
-                  className="w-full h-full object-cover grayscale-[30%] contrast-110"
+                  className="w-full h-full object-cover"
                   loading="eager"
                 />
                 

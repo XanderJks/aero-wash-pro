@@ -153,7 +153,7 @@ const Features = () => {
               <img
                 src={droneTechnology}
                 alt="SkyWashPro S1 industrial drone system"
-                className="w-full h-full object-cover grayscale-[30%]"
+                className="w-full h-full object-cover"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-foreground/10"></div>

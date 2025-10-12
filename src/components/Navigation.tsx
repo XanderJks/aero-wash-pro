@@ -26,7 +26,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           <button onClick={() => scrollToSection("hero")} className="flex items-center gap-3 group">
             <div className="relative w-12 h-12 border-2 border-foreground flex items-center justify-center border-l-4 border-l-primary">
-              <img src={droneLogo} alt="SkyWashPro Logo" className="w-10 h-10 grayscale" />
+              <img src={droneLogo} alt="SkyWashPro Logo" className="w-10 h-10" />
             </div>
             <span className="font-sans font-black text-xl text-foreground tracking-tighter uppercase">SkyWashPro</span>
           </button>

@@ -65,7 +65,7 @@ const VideoDemo = () => {
                       <img
                         src={thumbnailUrl}
                         alt="SkyWashPro drone cleaning demonstration video"
-                        className="w-full h-full object-cover grayscale-[30%]"
+                        className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-foreground/40"></div>
 
