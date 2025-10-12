@@ -37,8 +37,10 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 bg-secondary">
-      <div className="container mx-auto px-6 md:px-12">
+    <section id="features" className="py-24 bg-gradient-card relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+      <div className="container mx-auto px-6 md:px-12 relative">
         <div className="max-w-3xl mb-20">
           <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">CAPABILITIES</div>
           <h2 className="font-sans text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
@@ -50,11 +52,17 @@ const Features = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-          {features.map((feature) => {
+          {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={feature.title} className="bg-background p-8 rounded-sm border border-border hover:border-foreground/20 transition-colors">
-                <Icon className="h-8 w-8 text-foreground mb-6" strokeWidth={1.5} />
+              <div 
+                key={feature.title} 
+                className="group bg-background p-8 rounded-2xl border border-border hover:border-primary/30 card-hover shadow-card"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 group-hover:shadow-glow transition-all">
+                  <Icon className="h-7 w-7 text-primary-foreground" strokeWidth={2} />
+                </div>
                 <h3 className="text-lg font-semibold mb-3 text-foreground">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
@@ -62,7 +70,7 @@ const Features = () => {
           })}
         </div>
 
-        <div className="bg-background rounded-sm border border-border overflow-hidden">
+        <div className="bg-background rounded-2xl border border-primary/10 overflow-hidden shadow-elegant">
           <div className="grid lg:grid-cols-2">
             <div className="p-12 lg:p-16 flex flex-col justify-center">
               <div className="text-xs font-semibold tracking-wider text-muted-foreground uppercase mb-4">TECHNICAL SPECIFICATIONS</div>
@@ -72,20 +80,20 @@ const Features = () => {
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-10">
-                <div className="border-l-2 border-foreground pl-4">
-                  <div className="text-2xl font-bold text-foreground">3200</div>
+                <div className="border-l-3 border-gradient-primary pl-4 group">
+                  <div className="text-3xl font-bold gradient-text">3200</div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">PSI Pressure</div>
                 </div>
-                <div className="border-l-2 border-foreground pl-4">
-                  <div className="text-2xl font-bold text-foreground">100m</div>
+                <div className="border-l-3 border-gradient-primary pl-4">
+                  <div className="text-3xl font-bold gradient-text">100m</div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">Operating Range</div>
                 </div>
-                <div className="border-l-2 border-foreground pl-4">
-                  <div className="text-2xl font-bold text-foreground">15km</div>
+                <div className="border-l-3 border-gradient-primary pl-4">
+                  <div className="text-3xl font-bold gradient-text">15km</div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">Video Range</div>
                 </div>
-                <div className="border-l-2 border-foreground pl-4">
-                  <div className="text-2xl font-bold text-foreground">180°</div>
+                <div className="border-l-3 border-gradient-primary pl-4">
+                  <div className="text-3xl font-bold gradient-text">180°</div>
                   <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">Nozzle Rotation</div>
                 </div>
               </div>
