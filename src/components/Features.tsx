@@ -1,6 +1,8 @@
-import { Shield, Zap, DollarSign, Clock, Droplets, CheckCircle } from "lucide-react";
+import { useState } from "react";
+import { Shield, Zap, DollarSign, Clock, Droplets, CheckCircle, Play, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import droneProduct from "@/assets/drone-product-colors.jpg";
+import droneProductSingle from "@/assets/drone-product-single.jpg";
 
 const features = [
   {
@@ -36,6 +38,10 @@ const features = [
 ];
 
 const Features = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const videoId = "1126769563";
+  const thumbnailUrl = `https://vumbnail.com/${videoId}.jpg`;
+
   return (
     <section id="features" className="py-32 bg-secondary relative overflow-hidden">
       {/* Red accent bars */}
@@ -149,13 +155,74 @@ const Features = () => {
                 <div className="absolute inset-0 bg-foreground opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </button>
             </div>
-            <div className="relative bg-muted">
-              <img
-                src={droneProduct}
-                alt="SkyWashPro S1 industrial drone system with interchangeable color modules"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+            <div className="relative bg-muted space-y-0">
+              {/* Product Images */}
+              <div className="grid grid-rows-2 h-1/2 border-b-4 border-foreground">
+                <div className="relative border-b-2 border-foreground">
+                  <img
+                    src={droneProduct}
+                    alt="SkyWashPro S1 industrial drone system with interchangeable color modules"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="relative">
+                  <img
+                    src={droneProductSingle}
+                    alt="SkyWashPro S1 industrial drone detailed view"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              
+              {/* Video Section */}
+              <div className="h-1/2">
+                {!isVideoOpen ? (
+                  <div
+                    className="relative overflow-hidden cursor-pointer h-full"
+                    onClick={() => setIsVideoOpen(true)}
+                  >
+                    <img
+                      src={thumbnailUrl}
+                      alt="SkyWashPro drone product demonstration"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-foreground/40"></div>
+
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="relative">
+                        <div className="bg-foreground text-background p-8 group-hover:scale-105 transition-transform">
+                          <Play className="h-12 w-12 ml-1" fill="currentColor" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="absolute top-6 left-6 bg-foreground text-background px-6 py-3 text-xs font-bold uppercase tracking-widest">
+                      Product Demo
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative h-full">
+                    <iframe
+                      className="w-full h-full"
+                      src={`https://player.vimeo.com/video/${videoId}?autoplay=1&title=0&byline=0&portrait=0`}
+                      title="SkyWashPro Product Demo"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                    <button
+                      className="absolute top-4 right-4 w-12 h-12 bg-foreground hover:bg-foreground/90 text-background flex items-center justify-center z-10"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsVideoOpen(false);
+                      }}
+                    >
+                      <X className="h-6 w-6" />
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
