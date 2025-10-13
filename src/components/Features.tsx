@@ -1,6 +1,6 @@
 import { Shield, Zap, DollarSign, Clock, Droplets, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import droneTechnology from "@/assets/drone-technology.png";
+import droneProduct from "@/assets/drone-product-colors.jpg";
 
 const features = [
   {
@@ -151,12 +151,11 @@ const Features = () => {
             </div>
             <div className="relative bg-muted">
               <img
-                src={droneTechnology}
-                alt="SkyWashPro S1 industrial drone system"
+                src={droneProduct}
+                alt="SkyWashPro S1 industrial drone system with interchangeable color modules"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-foreground/10"></div>
             </div>
           </div>
         </div>
