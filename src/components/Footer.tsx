@@ -42,9 +42,6 @@ const Footer = () => {
             <h4 className="font-black text-xs mb-4 uppercase tracking-[0.2em]">Product</h4>
             <ul className="space-y-2 text-background/70 text-xs font-mono">
               <li>SkyWashPro S1</li>
-              <li>Training Program</li>
-              <li>Technical Support</li>
-              <li>Warranty Coverage</li>
             </ul>
           </div>
 
