@@ -111,10 +111,7 @@ const faqCategories = [
         question: "How do I buy a SkyWashPro drone?",
         answer: "Contact us through the website for a demo and quote. We'll discuss your needs, recommend a package, provide pricing, and answer questions. Once you decide, we process your order, schedule training, and ship your equipment. Typical delivery is 2-4 weeks."
       },
-      {
-        question: "Do you offer financing?",
-        answer: "Yes, we partner with equipment financing companies for qualified buyers. Typical terms range from 24-60 months. Many operators find that revenue from their first few jobs covers monthly payments."
-      },
+
       {
         question: "Do you ship internationally?",
         answer: "Yes, worldwide. Shipping is free to UAE, Europe, and North America. International shipping rates vary by destination. We handle customs documentation and provide clearance assistance."
