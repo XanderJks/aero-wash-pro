@@ -4,12 +4,9 @@ import { Button } from "@/components/ui/button";
 
 const VideoDemo = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [isProductVideoOpen, setIsProductVideoOpen] = useState(false);
 
   const videoId = "1126564149";
-  const productVideoId = "1126769563";
   const thumbnailUrl = `https://vumbnail.com/${videoId}.jpg`;
-  const productThumbnailUrl = `https://vumbnail.com/${productVideoId}.jpg`;
 
   return (
     <section className="py-32 bg-background relative overflow-hidden">
@@ -119,55 +116,6 @@ const VideoDemo = () => {
                   <div className="text-3xl font-black text-foreground">100%</div>
                   <div className="text-xs text-muted-foreground mt-2 uppercase tracking-widest font-bold">Safe</div>
                 </div>
-              </div>
-
-              {/* Product Video */}
-              <div className="mt-8">
-                {!isProductVideoOpen ? (
-                  <div
-                    className="relative overflow-hidden cursor-pointer border-4 border-foreground offset-shadow"
-                    onClick={() => setIsProductVideoOpen(true)}
-                  >
-                    <div className="aspect-[16/9] relative">
-                      <img
-                        src={productThumbnailUrl}
-                        alt="SkyWashPro drone product demonstration"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-foreground/40"></div>
-
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="relative">
-                          <div className="bg-foreground text-background p-8 group-hover:scale-105 transition-transform">
-                            <Play className="h-12 w-12 ml-1" fill="currentColor" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="absolute top-6 left-6 bg-foreground text-background px-6 py-3 text-xs font-bold uppercase tracking-widest">
-                        Product Demo
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="relative border-4 border-foreground overflow-hidden offset-shadow">
-                    <div className="aspect-[16/9]">
-                      <iframe
-                        className="w-full h-full"
-                        src={`https://player.vimeo.com/video/${productVideoId}?autoplay=1&title=0&byline=0&portrait=0`}
-                        title="SkyWashPro Product Demo"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                    <button
-                      className="absolute top-4 right-4 w-12 h-12 bg-foreground hover:bg-foreground/90 text-background flex items-center justify-center"
-                      onClick={() => setIsProductVideoOpen(false)}
-                    >
-                      <X className="h-6 w-6" />
-                    </button>
-                  </div>
-                )}
               </div>
             </div>
           </div>
