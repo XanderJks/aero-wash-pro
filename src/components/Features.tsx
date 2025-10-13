@@ -1,6 +1,6 @@
 import { Shield, Zap, DollarSign, Clock, Droplets, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import droneTechnology from "@/assets/drone-technology.png";
+import droneTechnology from "@/assets/drone-product-colors.jpg";
 
 const features = [
   {
