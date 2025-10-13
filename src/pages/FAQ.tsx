@@ -118,15 +118,11 @@ const faqCategories = [
       },
       {
         question: "What's your warranty?",
-        answer: "Standard package: 1 year full coverage. Professional: 3 years. Enterprise: lifetime warranty available. All warranties cover parts and labor. Extended warranties can be purchased for any package."
+        answer: "Standard package: 3 year full coverage. All warranties cover parts and labor. Extended warranties can be purchased for any package."
       },
       {
         question: "Can we try before we buy?",
         answer: "We offer product demonstrations where you can see the SkyWashPro S1 in action. For serious buyers, we can arrange hands-on trial sessions. Contact us to schedule a demo in your region."
-      },
-      {
-        question: "What if the drone doesn't work for our business?",
-        answer: "We have a 30-day return policy if the equipment doesn't meet your expectations (conditions apply). However, most buyers find the opposite problem - they wish they'd bought it sooner. We also offer trade-up programs if you start with a Starter package and want to upgrade to Professional later."
       }
     ]
   }
