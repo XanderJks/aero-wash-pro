@@ -63,7 +63,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span className="text-background/70 text-sm">
-                  Ras Al Khaimah, UAE
+                  Dubai, UAE
                 </span>
               </li>
             </ul>
