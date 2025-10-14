@@ -31,7 +31,7 @@ const Hero = () => {
                 <div className="w-2 h-2 bg-primary animate-pulse"></div>
                 <span className="text-xs font-bold tracking-widest uppercase">SkyWashPro S1</span>
               </div>
-              <h1 className="font-sans text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tighter uppercase">
+              <h1 className="font-sans text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tighter uppercase pr-12">
                 Professional<br />
                 Drone<br />
                 <span className="industrial-line pl-6">Cleaning</span>
