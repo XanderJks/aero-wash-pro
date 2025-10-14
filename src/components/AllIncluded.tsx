@@ -6,7 +6,7 @@ import caseImage from "@/assets/case.jpg";
 const includedItems = [
   {
     title: "Product Video",
-    description: "5.5-inch HD display, 15km transmission range, night vision capability",
+    description: "",
     isVideo: true,
     videoUrl: "https://vimeo.com/1127243678",
     alt: "Drone cleaning system demonstration"
