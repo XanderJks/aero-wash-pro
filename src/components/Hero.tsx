@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 md:px-12 relative">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-24 items-center min-h-screen py-32">
           {/* Left Content */}
-          <div className="space-y-10">
+          <div className="space-y-10 relative z-20">
             <div>
               <div className="inline-flex items-center gap-3 bg-foreground text-background px-6 py-3 mb-8 border-l-4 border-primary">
                 <div className="w-2 h-2 bg-primary animate-pulse"></div>
