@@ -28,6 +28,12 @@ const includedItems = [
     description: "5.5-inch HD display, 15km transmission range, night vision capability",
     image: consoleImage,
     alt: "Professional drone control system"
+  },
+  {
+    title: "Transport Case",
+    description: "Aluminum protective case with integrated tool storage",
+    image: caseImage,
+    alt: "Professional transport case"
   }
 ];
 
