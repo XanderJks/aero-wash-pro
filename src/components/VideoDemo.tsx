@@ -104,17 +104,17 @@ const VideoDemo = () => {
               </div>
 
               <div className="grid grid-cols-3 gap-0 mt-8 border-4 border-foreground">
-                <div className="relative p-6 border-r-2 border-foreground">
+                <div className="relative p-4 border-r-2 border-foreground">
                   <div className="text-3xl font-black text-foreground">60%</div>
-                  <div className="text-xs text-muted-foreground mt-2 uppercase tracking-widest font-bold">Cost Cut</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-widest font-bold">Cost Cut</div>
                 </div>
-                <div className="relative p-6 border-r-2 border-foreground">
+                <div className="relative p-4 border-r-2 border-foreground">
                   <div className="text-3xl font-black text-foreground">5x</div>
-                  <div className="text-xs text-muted-foreground mt-2 uppercase tracking-widest font-bold">Faster</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-widest font-bold">Faster</div>
                 </div>
-                <div className="relative p-6">
+                <div className="relative p-4">
                   <div className="text-3xl font-black text-foreground">100%</div>
-                  <div className="text-xs text-muted-foreground mt-2 uppercase tracking-widest font-bold">Safe</div>
+                  <div className="text-xs text-muted-foreground mt-1 uppercase tracking-widest font-bold">Safe</div>
                 </div>
               </div>
             </div>
