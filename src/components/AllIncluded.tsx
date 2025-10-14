@@ -5,10 +5,11 @@ import caseImage from "@/assets/case.jpg";
 
 const includedItems = [
   {
-    title: "Control System",
+    title: "Product Video",
     description: "5.5-inch HD display, 15km transmission range, night vision capability",
-    image: consoleImage,
-    alt: "Professional drone control system"
+    isVideo: true,
+    videoUrl: "https://vimeo.com/1127243678",
+    alt: "Drone cleaning system demonstration"
   },
   {
     title: "Power System",
@@ -23,10 +24,10 @@ const includedItems = [
     alt: "Industrial pressure washing system"
   },
   {
-    title: "Transport Case",
-    description: "Aluminum protective case with integrated tool storage",
-    image: caseImage,
-    alt: "Professional transport case"
+    title: "Control System",
+    description: "5.5-inch HD display, 15km transmission range, night vision capability",
+    image: consoleImage,
+    alt: "Professional drone control system"
   }
 ];
 
@@ -61,20 +62,32 @@ const AllIncluded = () => {
         {/* Asymmetric grid */}
         <div className="grid md:grid-cols-4 gap-6 mb-20">
           {includedItems.map((item, index) => (
-            <div 
-              key={item.title} 
+            <div
+              key={item.title}
               className={`group bg-card brutalist-border overflow-hidden hover:border-foreground transition-all duration-300 offset-shadow ${
                 index === 0 ? 'md:col-span-2 md:row-span-2' : ''
               }`}
             >
               <div className={`overflow-hidden bg-muted relative ${index === 0 ? 'aspect-square' : 'aspect-square'}`}>
-                <img
-                  src={item.image}
-                  alt={item.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-foreground/10"></div>
+                {item.isVideo ? (
+                  <iframe
+                    src={`${item.videoUrl.replace('vimeo.com/', 'player.vimeo.com/video/')}?autoplay=1&loop=1&muted=1&background=1`}
+                    className="w-full h-full object-cover"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    title={item.alt}
+                  ></iframe>
+                ) : (
+                  <>
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-foreground/10"></div>
+                  </>
+                )}
               </div>
               <div className="p-6 relative bg-background">
                 <div className="absolute top-0 left-0 w-1 h-full bg-primary"></div>
