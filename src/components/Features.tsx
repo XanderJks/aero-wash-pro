@@ -1,6 +1,8 @@
-import { Shield, Zap, DollarSign, Clock, Droplets, CheckCircle } from "lucide-react";
+import { Shield, Zap, DollarSign, Clock, Droplets, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import droneTechnology from "@/assets/drone-technology.png";
+import { useState } from "react";
+import droneImage1 from "@/assets/WhatsApp Image 2025-10-16 at 10.01.57.jpeg";
+import droneImage2 from "@/assets/WhatsApp Image 2025-10-16 at 10.01.57(1).jpeg";
 
 const features = [
   {
@@ -36,6 +38,17 @@ const features = [
 ];
 
 const Features = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const droneImages = [droneImage1, droneImage2];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % droneImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + droneImages.length) % droneImages.length);
+  };
+
   return (
     <section id="features" className="py-32 bg-secondary relative overflow-hidden">
       {/* Red accent bars */}
@@ -149,14 +162,43 @@ const Features = () => {
                 <div className="absolute inset-0 bg-foreground opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </button>
             </div>
-            <div className="relative bg-muted">
+            <div className="relative bg-muted group">
               <img
-                src={droneTechnology}
+                src={droneImages[currentImageIndex]}
                 alt="SkyWashPro S1 industrial drone system"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-foreground/10"></div>
+
+              <button
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-foreground/80 hover:bg-foreground text-background flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+                aria-label="Next image"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+
+              <button
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-foreground/80 hover:bg-foreground text-background flex items-center justify-center transition-all opacity-0 group-hover:opacity-100"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {droneImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      index === currentImageIndex ? 'bg-primary w-8' : 'bg-background/50'
+                    }`}
+                    aria-label={`Go to image ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
